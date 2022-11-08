@@ -16,6 +16,7 @@ function App() {
           rel="noopener noreferrer"
         >
           Synapse OP
+          <p>I am Aayush</p>
         </a>
       </header>
     </div>
