@@ -1,3 +1,6 @@
 .navbar{
-    background-image: linear-gradient(to right,#010E1D,#010E1D);
+    background-image: linear-gradient(to right,black,black);
+}
+.nav-link{
+    font-size: 22px;
 }
