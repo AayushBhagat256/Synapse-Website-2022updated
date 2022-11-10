@@ -17,19 +17,19 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/">Home</a>
+                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Home</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" href="/">Projects</a>
+                <a class="nav-link active mx-2" href="/"><b className='nav' >Projects</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/">Events</a>
+                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Events</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/">Resources</a>
+                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Resources</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/">Contact Us</a>
+                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Contact Us</b></a>
               </li>
               {/* <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
