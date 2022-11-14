@@ -74,7 +74,7 @@ function Contact() {
                                                 <input
                                                     type="submit"
                                                     value="Send Message"
-                                                    className="btn btn-primary"
+                                                    className="btn btn-primary submit-button smtbtn"
                                                 />
                                             </div>
                                         </div>
@@ -83,7 +83,7 @@ function Contact() {
                             </div>
                         </div>
                         <div className="col-md-6 d-flex align-items-stretch second-box">
-                            <div className="info-wrap w-100 p-lg-5 p-4 img">
+                            <div className="info-wrap w-100 p-lg-5 p-4 imgss">
                                 <h3>Contact us</h3>
                                 <p className="mb-4">
                                     some info
