@@ -14,7 +14,10 @@ function App() {
       <Contact />
 
     </div>
+    <div className="facultyy">
     <Faculty/>
+    </div>
+    
     </>
   )
 }

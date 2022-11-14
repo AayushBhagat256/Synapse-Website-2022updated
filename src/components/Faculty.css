@@ -7,3 +7,9 @@
 .card{
     text-align: center;
 }
+.btn{
+    background-color: blue;
+}
+.container .hello{
+    color: black;
+}

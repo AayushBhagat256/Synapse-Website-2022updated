@@ -42,7 +42,7 @@ function Faculty() {
                 </div>
             )} */}
             <div className="container">
-                <h1>hello</h1>
+                <h1 className='hello'>hello</h1>
                 <div className="row">
                     {display.map(map=>
                     <div className="col-md-4">
