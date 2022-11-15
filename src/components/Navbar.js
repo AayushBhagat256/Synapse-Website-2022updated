@@ -4,7 +4,7 @@ import './Navbar.css'
 
 function Navbar() {
   return (
-    <div className='cuscolor mx-1'>
+    <div className='cuscolor '>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">

@@ -33,7 +33,7 @@ function Faculty() {
 
 
             <div className="container">
-                <h1 className='hello1'>hello</h1>
+                <h1 className='hello1'>hello Faculty</h1>
                 <div className="row">
                     {display.map(map =>
                         <div className="col-md-4" key={map.id}>
