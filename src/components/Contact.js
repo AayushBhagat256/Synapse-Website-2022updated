@@ -14,6 +14,8 @@ function Contact() {
                             <div className="contact-wrap w-100 p-lg-5 p-4">
                                 <h3 className="mb-4 f-heading">Send us a message</h3>
                                 <form
+                                    action='https://formspree.io/f/xvoylbdp'
+                                    method='POST'
                                     id="contactForm"
                                     className="contactForm"
                                 //   onSubmit={handleSubmit}
