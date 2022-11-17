@@ -5,26 +5,29 @@ import Faculty from './components/Faculty';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Core from './components/Core';
-
+import Aboutus from './components/Aboutus';
 
 function App() {
   return (
     <>
-    <div className="App">
+      <div className="App">
+        <Navbar />
+        <Contact />
+      </div>
+      <div className="Aboutus">
+        <Navbar />
+        <Aboutus />
+      </div>
 
-      <Navbar />
-      <Contact />
-
-    </div>
-    <div className="facultyy">
-    <Faculty/>
-    </div>
-    <div className="coree">
-      <Core/>
-    </div>
-    <div className='footer'>
-      <Footer/>
-    </div>
+      <div className="facultyy">
+        <Faculty />
+      </div>
+      <div className="coree">
+        <Core />
+      </div>
+      <div className='footer'>
+        <Footer />
+      </div>
     </>
   )
 }
