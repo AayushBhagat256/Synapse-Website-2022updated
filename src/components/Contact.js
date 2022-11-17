@@ -87,16 +87,16 @@ function Contact() {
                         <div className="col-md-6 d-flex align-items-stretch second-box">
                             <div className="info-wrap w-100 p-lg-5 p-4 imgss">
                                 <h3>Contact us</h3>
-                                <p className="mb-4">
+                                {/* <p className="mb-4">
                                     some info
-                                </p>
+                                </p> */}
                                 <div className="dbox w-100 d-flex align-items-start">
                                     <div className="icon d-flex align-items-center justify-content-center">
                                         <span className="fa fa-map-marker"></span>
                                     </div>
                                     <div className="text pl-3">
-                                        <p>
-                                            <span>Address:</span> dj scamvi
+                                        <p className='address-dj'>
+                                            <span>Address : </span><a href="https://maps.app.goo.gl/Qg4NXbT8WuX5dio1A">DJ Sanghvi College of Engineering </a>
                                         </p>
                                     </div>
                                 </div>
@@ -106,8 +106,8 @@ function Contact() {
                                     </div>
                                     <div className="text pl-3">
                                         <p>
-                                            <span>Phone:</span>
-                                            <a href="tel://123456789">+12345678</a>
+                                            <span>Phone : </span>
+                                            <a href="tel://+91 9869551340">+91 9869551340</a>
                                         </p>
                                     </div>
                                 </div>
@@ -117,24 +117,35 @@ function Contact() {
                                     </div>
                                     <div className="text pl-3">
                                         <p>
-                                            <span>Email:</span>
-                                            <a href="mailto:info@yoursite.com">
-                                                synapse@gmail.com
+                                            <span>Email : </span>
+                                            <a href="synapsecore2021@gmail.com">
+                                                synapsecore2021@gmail.com
                                             </a>
                                         </p>
                                     </div>
                                 </div>
                                 <div className="dbox w-100 d-flex align-items-center">
                                     <div className="icon d-flex align-items-center justify-content-center">
-                                        <span className="fa fa-globe"></span>
+                                        <span className="fa fa-linkedin"></span>
                                     </div>
                                     <div className="text pl-3">
                                         <p>
-                                            <span>Website:</span>
+                                            <span>Linkedin :<a href='https://www.linkedin.com/company/djs-synapse/'> https://www.linkedin.com/company/djs-synapse/ </a></span>
                                             {/* <a href="#">yoursite.com</a> */}
                                         </p>
                                     </div>
                                 </div>
+                                {/* <div className="dbox w-100 d-flex align-items-center">
+                                    <div className="icon d-flex align-items-center justify-content-center">
+                                        <span className="fa fa-github"></span>
+                                    </div>
+                                    <div className="text pl-3">
+                                        <p>
+                                            <span>Github :<a href='https://www.linkedin.com/company/djs-synapse/'> https://www.linkedin.com/company/djs-synapse/ </a></span>
+                                             <a href="#">yoursite.com</a> 
+                                        </p>
+                                    </div>
+                                </div>  */}
                             </div>
                         </div>
                         {/* </div> */}
