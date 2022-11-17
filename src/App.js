@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Core from './components/Core';
 import Aboutus from './components/Aboutus';
+import Excore from './components/Excore';
 
 function App() {
   return (
@@ -15,12 +16,15 @@ function App() {
         <Contact />
       </div>
       <div className="Aboutus">
-        <Navbar />
+        {/* <Navbar /> */}
         <Aboutus />
       </div>
 
       <div className="facultyy">
         <Faculty />
+      </div>
+      <div className="excoree">
+        <Excore/>
       </div>
       <div className="coree">
         <Core />

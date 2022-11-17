@@ -1,9 +1,10 @@
 .core{
-    color: black;
-    background-color: greenyellow;
+    /* color: black; */
+    background-color: #010E1D;
 }
-.heading{
-    color: black;
+.headingcore{
+    color: white;
+    text-align: center;
 }
 .card{
     text-align: center;
@@ -13,16 +14,19 @@
 /* .btn{
     background-color: blue;
 } */
-.container .hello1{
-    color: black;
+.container .hello1core{
+    color: white;
 }
 .card-title{
     color: black;
 }
-.container{
-    /* background-color: aqua; */
+.hello1core{
     text-align: center;
 }
+/* .container{
+    /* background-color: aqua; */
+    /* text-align: center; */
+/* } /* */
 /* .row{
     width: 100%;
     margin: auto;

@@ -1,9 +1,8 @@
-.faculty{
+.excore{
     /* color: black; */
     background-color: #010E1D;
 }
-
-.heading{
+.headingexcore{
     color: white;
     text-align: center;
 }
@@ -15,19 +14,19 @@
 /* .btn{
     background-color: blue;
 } */
-.container .hello1{
+.container .hello1excore{
     color: white;
 }
 .card-title{
     color: black;
 }
-.hello1{
+.hello1excore{
     text-align: center;
 }
 /* .container{
     /* background-color: aqua; */
     /* text-align: center; */
-/* } */ 
+/* } /* */
 /* .row{
     width: 100%;
     margin: auto;

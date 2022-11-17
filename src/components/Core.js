@@ -30,11 +30,11 @@ function Faculty() {
 
     return (
         <div className='core'>
-            <h1 className='heading'>This is Core </h1>
+            <h1 className='headingcore'>This is Core </h1>
 
 
             <div className="container">
-                <h1 className='hello1'>hello Core</h1>
+                <h1 className='hello1core'>hello Core</h1>
                 <div className="row">
                     {displaycore.map(map =>
                         <div className="col-md-4" key={map.SapId}>
