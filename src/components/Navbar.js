@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from './synapselogo.jpg'
 import './Navbar.css'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -29,7 +30,7 @@ function Navbar() {
                 <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Resources</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Contact Us</b></a>
+                <Link class="nav-link active mx-2" aria-current="page" to="/contactus"><b className='nav'>Contact Us</b></Link>
               </li>
               {/* <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

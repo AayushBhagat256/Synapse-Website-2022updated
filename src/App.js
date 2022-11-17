@@ -7,32 +7,65 @@ import Navbar from './components/Navbar';
 import Core from './components/Core';
 import Aboutus from './components/Aboutus';
 import Excore from './components/Excore';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Navbar />
-        <Contact />
-      </div>
-      <div className="Aboutus">
-        {/* <Navbar /> */}
-        <Aboutus />
-      </div>
+    <Router>
+      <>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path='/contactus' element={<Contact />} />
+          </Routes>
+          <div className='fragmentss'>
 
-      <div className="facultyy">
-        <Faculty />
-      </div>
-      <div className="excoree">
-        <Excore/>
-      </div>
-      <div className="coree">
-        <Core />
-      </div>
-      <div className='footer'>
-        <Footer />
-      </div>
-    </>
+            <div className="Aboutus">
+              {/* <Navbar /> */}
+              <Routes>
+            <Route path='/' element={<Aboutus />} />
+          </Routes>
+
+              
+            </div>
+
+            <div className="facultyy">
+            <Routes>
+            <Route path='/' element={<Faculty />} />
+          </Routes>
+              
+            </div>
+            <div className="excoree">
+              <Routes>
+            <Route path='/' element={<Excore />} />
+          </Routes>
+              
+            </div>
+            <div className="coree">
+            <Routes>
+            <Route path='/' element={<Core />} />
+          </Routes>
+              
+            </div>
+            <div className="footer">
+            <Footer />
+            </div>
+
+          </div>
+
+        </div>
+
+
+        
+
+      </>
+    </Router>
   )
 }
 
