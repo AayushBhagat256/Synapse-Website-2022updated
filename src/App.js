@@ -14,6 +14,7 @@ import {
   Link,
   Routes
 } from "react-router-dom";
+//import Upcoming from './components/Upcoming';
 
 function App() {
   return (
@@ -53,10 +54,10 @@ function App() {
           </Routes>
               
             </div>
+            
             <div className="footer">
             <Footer />
             </div>
-
           </div>
 
         </div>

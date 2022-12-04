@@ -18,5 +18,13 @@
   display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    min-height: 100vh;
+    min-height: 30vh;
+    background-color: black;
+}
+.upcomingevent{
+  line-height: 1.8;
+    min-height: 95vh;
+    display: grid;
+    place-items: center; 
+    background-color: rgb(35, 35, 35);
 }
