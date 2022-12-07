@@ -1,6 +1,6 @@
 .excore{
     /* color: black; */
-    background-color: #010E1D;
+    background-color: #041630;
 }
 .headingexcore{
     color: white;
@@ -10,6 +10,10 @@
     text-align: center;
     width: 100%;
     margin: auto;
+    background: transparent;
+    color: white;
+    /* border: 2px solid yellow; */
+    border: none;
 }
 /* .btn{
     background-color: blue;
@@ -18,7 +22,7 @@
     color: white;
 }
 .card-title{
-    color: black;
+    color: white;
 }
 .hello1excore{
     text-align: center;
@@ -32,3 +36,18 @@
     margin: auto;
     background-color: khaki;
 } */
+.btn{
+    background: transparent;
+    border: none;
+    font-size: 25px;
+}
+#insta:hover{
+    /* background-color: pink; */
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+#gmail:hover{
+    background: linear-gradient(48deg, transparent 35%, rgba(0, 0, 0, 0.05) 35%),
+    linear-gradient(-34.5deg, transparent 44.5%, rgba(0, 0, 0, 0.05) 44.5%),
+    linear-gradient(90deg, #dd4336 10%, #eeeeee 10%, #eeeeee 90%, #d53224 90%);
+    color: black;
+}
