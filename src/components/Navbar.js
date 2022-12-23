@@ -26,9 +26,9 @@ function Navbar() {
               <li class="nav-item">
                 <a class="nav-link active mx-2" aria-current="page" href="/timeline"><b className='nav'>Events</b></a>
               </li>
-              <li class="nav-item">
+              {/* <li class="nav-item">
                 <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Resources</b></a>
-              </li>
+              </li> */}
               <li class="nav-item">
                 <Link class="nav-link active mx-2" aria-current="page" to="/contactus"><b className='nav'>Contact Us</b></Link>
               </li>
