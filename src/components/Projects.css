@@ -25,7 +25,7 @@
 }
 
 .btn1 {
-    background: rgb(129, 198, 232);
+    background: rgba(129, 198, 232, 0.786);
     border: none;
     font-size: 25px;
     border-radius: 10px;
@@ -41,4 +41,13 @@
 
 .card-text {
     color: white;
+}
+.projects-title0{
+    font-size: 2rem;
+}
+.projects-title1{
+    font-size: 1.5rem;
+}
+.projects-title2{
+    font-size: 1.5rem;
 }
