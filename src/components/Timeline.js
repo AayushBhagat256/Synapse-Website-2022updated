@@ -60,29 +60,45 @@ function Timeline() {
                 setEvents(objectData.payload)
             })
     }
+    let imgurl2 = "https://synapseop.pythonanywhere.com"
     useEffect(
-      () => {
-          fetchApi();
-      }, []
-  )
-  return (
-    events.map(event=>
-        <div class="timeline">
-  <div class="econtainer left">
-    <div class="econtent">
-       <h1>{event.title}</h1> 
-      <h4>{event.date}</h4>
-      <p>{event.description}</p>
-    </div>
-  </div>
-  {/* <div class="econtainer right">
-    <div class="econtent">
-      <h2>2016</h2>
-      <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-    </div>
-  </div> */}
-  </div>)
-  )
+        () => {
+            fetchApi();
+        }, []
+    )
+    return (
+        <div>
+            <h1 className='etimetitle'><b>Events</b></h1>
+            {
+                events.map(event =>
+                    <div class="timeline">
+                        {event.id % 2 === 0 ? (
+                            <>
+                                <div class="econtainer left">
+                                    <div class="econtent">
+                                        <h1 className='timetitle'>{event.title}</h1>
+                                        <h4 className='timedate'>{event.date}</h4>
+                                        <p className='timedesc'>{event.description}</p>
+                                        <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                                    </div>
+                                </div>
+                            </>
+                        ) : (
+                            <>
+                                <div class="econtainer right">
+                                    <div class="econtent">
+                                        <h1 className='timetitle'>{event.title}</h1>
+                                        <h4 className='timedate'>{event.date}</h4>
+                                        <p className='timedesc'>{event.description}</p>
+                                        <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </div>)
+            }
+        </div>
+    )
 }
 
 export default Timeline

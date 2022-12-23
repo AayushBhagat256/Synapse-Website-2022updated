@@ -1,7 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { FaGithub } from 'react-icons/fa';
-import { FaLinkedinIn  } from 'react-icons/fa';
+import { BsLinkedin  } from 'react-icons/bs';
 import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
         <h3 class="tagline">Teaching Machines to Learn</h3>
         <ul class="icons">
             <li><a href="https://github.com/Synapse-DJSCE" target="_blank"><FaGithub/></a></li>
-            <li><a href="https://www.linkedin.com/company/djs-synapse/" target="_blank"><FaLinkedinIn/></a></li>
+            <li><a href="https://www.linkedin.com/company/djs-synapse/" target="_blank"><BsLinkedin/></a></li>
             <li><a href="https://www.instagram.com/synapse.djsce/" target="_blank"><FaInstagram/></a></li>
         </ul>
         <div class="contact">

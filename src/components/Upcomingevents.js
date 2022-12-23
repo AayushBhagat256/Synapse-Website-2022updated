@@ -30,7 +30,7 @@ const Upcomingevents = () => {
     newevents.map(card=>
       <div class='ecard mx-4' key={card.id}>
        
-      <img src={imgurl1 +card.images[3]} className='eimg' alt=''></img>
+      <img src={imgurl1 +card.images[0]} className='eimg' alt=''></img>
       {console.log(imgurl1+card.images[0])}
       <div className='ecardinfo'>
         <h1 className='etitle'>{card.title}</h1>

@@ -33,5 +33,6 @@
     font-family: 'Poppins';
 }
 .events{
-  background: rgb(20, 41, 86);
+  background: rgb(14, 29, 60);
+  justify-content: center;
 }
