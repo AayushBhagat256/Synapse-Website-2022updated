@@ -41,13 +41,30 @@
     border: none;
     font-size: 25px;
 }
+#linkin{
+    opacity: 0.65;
+}
+#linkin:hover{
+    opacity: 1;
+    background: transparent;
+}
+#insta{
+    opacity: 0.65;
+}
 #insta:hover{
     /* background-color: pink; */
-    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); */
+    opacity: 1;
+    background: transparent;
+}
+#gmail{
+    opacity: 0.65;
 }
 #gmail:hover{
-    background: linear-gradient(48deg, transparent 35%, rgba(0, 0, 0, 0.05) 35%),
+    /* background: linear-gradient(48deg, transparent 35%, rgba(0, 0, 0, 0.05) 35%),
     linear-gradient(-34.5deg, transparent 44.5%, rgba(0, 0, 0, 0.05) 44.5%),
     linear-gradient(90deg, #dd4336 10%, #eeeeee 10%, #eeeeee 90%, #d53224 90%);
-    color: black;
+    color: black; */
+    opacity: 1;
+    background: transparent;
 }
