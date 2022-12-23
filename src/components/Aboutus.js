@@ -1,12 +1,12 @@
 import "./Aboutus.css";
-import roboimg from './RobotImage.png'
+import roboimg from './Roboimg.png';
 
 const About = () => {
   return (
     <div className="a">
         <div className="a-left">
         <p className="a-desc">
-        <h1 className="a-title">ABOUT US</h1>
+        <h1 className="a-title container">ABOUT US</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed doeiusmod tempor incididunt ut labore et dolore magna 
           aliqua. Ut enim adminim veniam, quis nostrud exercitation 
@@ -19,7 +19,7 @@ const About = () => {
           <img
             src={roboimg}
             alt=""
-            className="a-img"
+            className="img-fluid"
           />
         </div>
       </div>

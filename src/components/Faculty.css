@@ -33,3 +33,24 @@
     margin: auto;
     background-color: khaki;
 } */
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+#nameee{
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+#testii{
+    text-align: center;
+    height: 18vh;
+    width: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* overflow: overlay; */
+}
+#poss{
+    font-weight: 700;
+    text-align: center;
+}

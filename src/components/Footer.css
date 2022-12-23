@@ -21,11 +21,13 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 }
 .tagline{
     font-size: 20px;
     color: white;
     opacity: 0.85;
+    text-align: center;
 }
 .icons,.menu{
     position: relative;
