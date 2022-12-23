@@ -1,4 +1,3 @@
-
 import './App.css';
 import Contact from './components/Contact';
 import Faculty from './components/Faculty';
@@ -52,6 +51,18 @@ function App() {
 
             </div>
             <div className="coree">
+            <Routes>
+            <Route path='/' element={<Core />} />
+          </Routes>
+          
+              
+            </div>
+            
+            <div className="projects">
+            <Routes>
+            <Route path='/project' element={<Projects />} />
+          </Routes>
+
               <Routes>
                 <Route path='/' element={<Core />} />
               </Routes>
@@ -70,7 +81,6 @@ function App() {
                 </Routes>
 
               </div>
-
             </div>
             
 

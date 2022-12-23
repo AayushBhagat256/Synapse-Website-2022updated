@@ -7,7 +7,7 @@
   background-image: url('./components/bgimg2.jpg');
       background-repeat: no-repeat;
       background-size: cover;
-      height: 145vh;
+      height:150vh;
 }
 .Aboutus{
   background-image: url('./components/bgimg2.jpg');
@@ -36,3 +36,7 @@
   background: #02182B;
   justify-content: center;
 }
+/*.projects{
+  background-color: blue; 
+  height: 700vh;
+}*/
