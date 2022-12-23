@@ -7,13 +7,16 @@ import Navbar from './components/Navbar';
 import Core from './components/Core';
 import Aboutus from './components/Aboutus';
 import Excore from './components/Excore';
+import Projects from './components/Projects';
 import {
   BrowserRouter as Router,
-  Switch,
+  //Switch,
   Route,
-  Link,
+ // Link,
   Routes
 } from "react-router-dom";
+import Upcomingevents from './components/Upcomingevents';
+import Timeline from './components/Timeline';
 //import Upcoming from './components/Upcoming';
 
 function App() {
@@ -52,12 +55,22 @@ function App() {
             <Routes>
             <Route path='/' element={<Core />} />
           </Routes>
+          <Routes>
+            <Route path='/project' element={<Projects />} />
+          </Routes>
               
+            </div>
+            <div className='upevents'>
+              <Upcomingevents/>
+            </div>
+            <div className='events'>
+            <Timeline/>
             </div>
             
             <div className="footer">
             <Footer />
             </div>
+            
           </div>
 
         </div>
