@@ -24,7 +24,7 @@ function Navbar() {
                 <a class="nav-link active mx-2" href="/project"><b className='nav' >Projects</b></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Events</b></a>
+                <a class="nav-link active mx-2" aria-current="page" href="/timeline"><b className='nav'>Events</b></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active mx-2" aria-current="page" href="/"><b className='nav'>Resources</b></a>

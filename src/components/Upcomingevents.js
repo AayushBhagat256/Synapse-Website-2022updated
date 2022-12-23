@@ -27,34 +27,27 @@ const Upcomingevents = () => {
   )
   
   return (
-    newevents.map(card=>
-      <div class='ecard mx-4' key={card.id}>
-       
-      <img src={imgurl1 +card.images[0]} className='eimg' alt=''></img>
-      {console.log(imgurl1+card.images[0])}
-      <div className='ecardinfo'>
-        <h1 className='etitle'>{card.title}</h1>
-        <p className='einfo'>{card.description}</p>
-         <h3 className='edate'>{card.date}</h3>
-         <div className='ebtn'>
-         <button className='ereg'>register</button>
-         </div>
-      </div>
+    <div>
+      <h1 className='uptitle'><b>Upcoming Events</b></h1>
+      {
+        newevents.map(card=>
+          <div class='ecard mx-4' key={card.id}>
+           
+          <img src={imgurl1 +card.images[0]} className='eimg' alt=''></img>
+          {console.log(imgurl1+card.images[0])}
+          <div className='ecardinfo'>
+            <h1 className='etitle'>{card.title}</h1>
+            <p className='einfo'>{card.description}</p>
+             <h5 className='edate'>{card.date}</h5>
+             {/* <div className='ebtn'>
+             <button className='ereg'>register</button>
+             </div> */}
+          </div>
+        </div>
+          )
+      }
     </div>
-      )
-    // <div>
-    //     <div class='ecard' >
-    //    <img src={IAF} className='eimg' alt=''></img>
-    //    <div className='ecardinfo'>
-    //      <h1 className='etitle'>hjfl</h1>
-    //      <p className='einfo'>ffhfhf</p>
-    //       <h3 className='edate'>fhgfuf</h3>
-    //       <div className='ebtn'>
-    //       <button className='ereg'>register</button>
-    //       </div>
-    //    </div>
-    //  </div>
-    // </div>
+    
   )
 }
 

@@ -1,11 +1,17 @@
 .ecard{
-    width: 320px;
-    height: 500px;
+    width: 420px;
+    height: 550px;
     border-radius: 20px;
     border: 8px solid rgb(245, 245, 249);
     position: relative;
     overflow: hidden;
     padding: 0px;
+    margin: 30px;
+}
+.uptitle{
+    text-align: center;
+    color: #81C6E8;
+    padding: 20px;
 }
 .eimg{
     width: 100%;

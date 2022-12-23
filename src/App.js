@@ -12,7 +12,7 @@ import {
   BrowserRouter as Router,
   //Switch,
   Route,
- // Link,
+  // Link,
   Routes
 } from "react-router-dom";
 import Upcomingevents from './components/Upcomingevents';
@@ -33,50 +33,58 @@ function App() {
             <div className="Aboutus">
               {/* <Navbar /> */}
               <Routes>
-            <Route path='/' element={<Aboutus />} />
-          </Routes>
+                <Route path='/' element={<Aboutus />} />
+              </Routes>
 
-              
+
             </div>
 
             <div className="facultyy">
-            <Routes>
-            <Route path='/' element={<Faculty />} />
-          </Routes>
-              
+              <Routes>
+                <Route path='/' element={<Faculty />} />
+              </Routes>
+
             </div>
             <div className="excoree">
               <Routes>
-            <Route path='/' element={<Excore />} />
-          </Routes>
-              
+                <Route path='/' element={<Excore />} />
+              </Routes>
+
             </div>
             <div className="coree">
-            <Routes>
-            <Route path='/' element={<Core />} />
-          </Routes>
-          <Routes>
-            <Route path='/project' element={<Projects />} />
-          </Routes>
+              <Routes>
+                <Route path='/' element={<Core />} />
+              </Routes>
+              <div className='upevents'>
+              <Routes>
+                <Route path='/' element={<Upcomingevents />} />
+              </Routes>
+              </div>
               
-            </div>
-            <div className='upevents'>
-              <Upcomingevents/>
-            </div>
-            <div className='events'>
-            <Timeline/>
+              <Routes>
+                <Route path='/project' element={<Projects />} />
+              </Routes>
+              <div className='events'>
+                <Routes>
+                  <Route path='/timeline' element={<Timeline />} />
+                </Routes>
+
+              </div>
+
             </div>
             
+
+
             <div className="footer">
-            <Footer />
+              <Footer />
             </div>
-            
+
           </div>
 
         </div>
 
 
-        
+
 
       </>
     </Router>

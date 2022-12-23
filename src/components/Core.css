@@ -1,6 +1,6 @@
 .core{
     /* color: black; */
-    background-color: #041630;
+    background-color: #02182B;
     
 }
 .headingcore{
@@ -17,7 +17,8 @@
     background-color: blue;
 } */
 .container .hello1core{
-    color: white;
+    padding: 20px;
+    color: #81C6E8;
 }
 .card-title{
     color: black;

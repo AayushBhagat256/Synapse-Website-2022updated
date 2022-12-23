@@ -1,6 +1,6 @@
  .excore{
     color: black; 
-    background-color: #041630;
+    background-color: #02182B;
  }
 .headingexcore{
     color: white;
@@ -30,7 +30,8 @@
     background-color: blue;
 } */
 .container .hello1excore{
-    color: white;
+    padding: 20px;
+    color: #81C6E8;
 }
 .card-title{
     color: white;

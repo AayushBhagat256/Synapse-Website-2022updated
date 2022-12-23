@@ -15,12 +15,12 @@ const Footer = () => {
             <li><a href="https://www.instagram.com/synapse.djsce/" target="_blank"><FaInstagram/></a></li>
         </ul>
         <div class="contact">
-            <p>Want to get in touch with us? Send a <a href="#"><b>Message</b></a></p>
+            <p>Want to get in touch with us? Send a <a href="/contactus"><b>Message</b></a></p>
         </div>
         <ul class="menu">
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="/">About us</a></li>
+            <li><a href="/projects">Projects</a></li>
+            <li><a href="/timeline">Events</a></li>
         </ul>
         </div>
     </footer>
