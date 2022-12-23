@@ -9,11 +9,13 @@ import Aboutus from './components/Aboutus';
 import Excore from './components/Excore';
 import {
   BrowserRouter as Router,
-  Switch,
+  //Switch,
   Route,
-  Link,
+ // Link,
   Routes
 } from "react-router-dom";
+import Upcomingevents from './components/Upcomingevents';
+import Timeline from './components/Timeline';
 //import Upcoming from './components/Upcoming';
 
 function App() {
@@ -54,10 +56,17 @@ function App() {
           </Routes>
               
             </div>
+            <div className='upevents'>
+              <Upcomingevents/>
+            </div>
+            <div className='events'>
+            <Timeline/>
+            </div>
             
             <div className="footer">
             <Footer />
             </div>
+            
           </div>
 
         </div>
