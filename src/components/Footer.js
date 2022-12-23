@@ -6,7 +6,8 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer>
+    <footer >
+      <div className="siuu">
         <h3 class="tagline">Teaching Machines to Learn</h3>
         <ul class="icons">
             <li><a href="https://github.com/Synapse-DJSCE" target="_blank"><FaGithub/></a></li>
@@ -21,6 +22,7 @@ const Footer = () => {
             <li><a href="#">Projects</a></li>
             <li><a href="#">Events</a></li>
         </ul>
+        </div>
     </footer>
   )
 }

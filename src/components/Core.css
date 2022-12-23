@@ -1,15 +1,17 @@
 .core{
     /* color: black; */
     background-color: #041630;
+    
 }
 .headingcore{
     color: white;
     text-align: center;
 }
 .card{
-    text-align: center;
+    text-align: left;
     width: 100%;
     margin: auto;
+    background: rgba( 84,84,142,0.25);
 }
 /* .btn{
     background-color: blue;
@@ -32,3 +34,25 @@
     margin: auto;
     background-color: khaki;
 } */
+/* #imgss{
+    text-align: center;
+    height: 40vh;
+    width: 34vh;
+} */
+#namee{
+    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+#testi{
+    /* text-align: center; */
+    height: 18vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    /* overflow: overlay; */
+}
+#pos{
+    font-weight: 700;
+    text-align: center;
+}
