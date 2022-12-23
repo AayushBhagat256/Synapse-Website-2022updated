@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Core from './components/Core';
 import Aboutus from './components/Aboutus';
 import Excore from './components/Excore';
+import Projects from './components/Projects';
 import {
   BrowserRouter as Router,
   Switch,
@@ -51,6 +52,9 @@ function App() {
             <div className="coree">
             <Routes>
             <Route path='/' element={<Core />} />
+          </Routes>
+          <Routes>
+            <Route path='/project' element={<Projects />} />
           </Routes>
               
             </div>
