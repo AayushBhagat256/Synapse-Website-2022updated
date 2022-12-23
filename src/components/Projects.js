@@ -25,11 +25,11 @@ function Projects() {
     <>
       <div className='all'>
         {displayProjects.map((project) => (
-          <div class="  Project-cards" >
+          <div class="Project-cards" >
             <div class="Project-Body">
               <h5 class="card-title">{project.title}</h5>
-              <h5 class="card-title">{project.project_no}</h5>
-              <h5 class="card-title">{project.field}</h5>
+              <h5 class="card-title1">{project.project_no}</h5>
+              <h5 class="card-title2">{project.field}</h5>
               <p class="card-text">{project.description}</p>
               <a href={project.link} class="btn1">OPEN PDF</a>
             </div>
