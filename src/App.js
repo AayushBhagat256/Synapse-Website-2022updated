@@ -63,18 +63,14 @@ function App() {
             <Route path='/project' element={<Projects />} />
           </Routes>
 
-              <Routes>
-                <Route path='/' element={<Core />} />
-              </Routes>
+              
               <div className='upevents'>
               <Routes>
                 <Route path='/' element={<Upcomingevents />} />
               </Routes>
               </div>
               
-              <Routes>
-                <Route path='/project' element={<Projects />} />
-              </Routes>
+              
               <div className='events'>
                 <Routes>
                   <Route path='/timeline' element={<Timeline />} />
