@@ -4,14 +4,16 @@ import roboimg from './Roboimg.png';
 const About = () => {
   return (
     <div className="a">
-        <div className="a-left">
+      <div className="a-left">
         <p className="a-desc">
-        <h1 className="a-title container">ABOUT US</h1>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed doeiusmod tempor incididunt ut labore et dolore magna 
-          aliqua. Ut enim adminim veniam, quis nostrud exercitation 
-          ullamco laboris nisi utaliquip ex ea commodo consequat dui
-          s aute irure dolor in reprehende.
+          <h1 className="a-title container">ABOUT US</h1>
+          Founded in 2020 out of passion for the AI/ML domain we are Synapse ,
+          The official AI/ML club of DJ Sanghvi working on ML projects,
+          researching on various topics and having fun in the process. Synapse
+          truly believes in the transformative powers of ML and 
+          hence provides mentorship and motivation to a student for
+          researching a field of his/her interest and creates an innovative
+          solution to the world problems by implementing modern solutions.
         </p>
       </div>
       <div className="a-right">
