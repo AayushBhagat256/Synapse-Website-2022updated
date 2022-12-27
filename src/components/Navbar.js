@@ -1,12 +1,12 @@
 import React from 'react'
-import Logo from './synapselogo.jpg'
+import Logo from './nobgsynapses.png'
 import './Navbar.css'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
     <div className='cuscolor '>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-transparent">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">
             <img src={Logo} alt="Logo" width="80" height="80" class="d-inline-block align-text-top" />
