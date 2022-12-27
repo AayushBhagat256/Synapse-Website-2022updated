@@ -17,7 +17,12 @@
     margin: 0px auto;
     padding: 35px;
   }
-  .timetitle,.timedate{
+  .timetitle{
+    font-size: 27px;
+    color: #81C6E8;
+  }
+  .timedate{
+    font-size: 22px;
     color: #81C6E8;
   }
   
@@ -115,6 +120,7 @@
     color: white;
   }
   .timedesc{
+    font-size: 13px;
     text-align: center;
   }
   /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -150,8 +156,8 @@
     }
   }
   .etimeimg{
-    width:310px;
-    height: 310px;
+    width:190px;
+    height: 190px;
     border-radius: 10px;
    
   }

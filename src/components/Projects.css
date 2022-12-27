@@ -1,6 +1,10 @@
+.ptitle{
+    text-align: center;
+    color: #81C6E8;
+}
 .Project-cards {
     text-align: center;
-    width: 60vw;
+    width: 45vw;
     /*height: auto;*/
     margin: auto;
     margin-top: 35px;
@@ -29,7 +33,7 @@
     border: none;
     font-size: 25px;
     border-radius: 10px;
-    padding: 8px;
+    padding: 10px 50px;
 }
 
 .all {
@@ -43,11 +47,11 @@
     color: white;
 }
 .projects-title0{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }
 .projects-title1{
     font-size: 1rem;
 }
 .projects-title2{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
