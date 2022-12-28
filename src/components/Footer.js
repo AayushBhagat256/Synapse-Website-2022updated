@@ -10,9 +10,9 @@ const Footer = () => {
       <div className="siuu">
         <h3 class="tagline">Teaching Machines to Learn</h3>
         <ul class="icons">
-            <li><a href="https://github.com/Synapse-DJSCE" target="_blank"><FaGithub/></a></li>
-            <li><a href="https://www.linkedin.com/company/djs-synapse/" target="_blank"><FaLinkedinIn/></a></li>
-            <li><a href="https://www.instagram.com/synapse.djsce/" target="_blank"><FaInstagram/></a></li>
+            <li><a href="https://github.com/Synapse-DJSCE" ><FaGithub/></a></li>
+            <li><a href="https://www.linkedin.com/company/djs-synapse/" ><FaLinkedinIn/></a></li>
+            <li><a href="https://www.instagram.com/synapse.djsce/" ><FaInstagram/></a></li>
         </ul>
         <div class="contact">
             <p>Want to get in touch with us? Send a <a href="/contactus"><b>Message</b></a></p>

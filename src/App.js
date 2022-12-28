@@ -40,19 +40,19 @@ function App() {
 
             <div className="facultyy">
               <Routes>
-                <Route path='/' element={<Faculty />} />
+                <Route path='/faculty' element={<Faculty />} />
               </Routes>
 
             </div>
             <div className="excoree">
               <Routes>
-                <Route path='/' element={<Excore />} />
+                <Route path='/excore' element={<Excore />} />
               </Routes>
 
             </div>
             <div className="coree">
             <Routes>
-            <Route path='/' element={<Core />} />
+            <Route path='/core' element={<Core />} />
           </Routes>
           
               

@@ -1,6 +1,7 @@
  .excore{
     color: black; 
-    background-color: #02182B;
+    /* background-color: #02182B; */
+    background: transparent;
  }
 .headingexcore{
     color: white;
@@ -22,7 +23,7 @@
     margin-top: 2em;
     border-radius: 1.5em;
     border: 1px solid rgba(97, 149, 187, 0.555);
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-bottom: 2rem; 
     
 }

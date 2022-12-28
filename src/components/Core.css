@@ -1,6 +1,8 @@
 .core{
     /* color: black; */
-    background-color: #02182B;
+    /* background-color: #02182B; */
+    background: transparent;
+    /* background-image: url('./bgimg2.jpg'); */
     
 }
 .headingcore{
@@ -9,7 +11,7 @@
 }
 .card{
     text-align: left;
-    width: 100%;
+    width: 100vw;
     margin: auto;
     background: rgba( 84,84,142,0.25);
 }
