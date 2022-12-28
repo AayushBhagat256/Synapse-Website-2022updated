@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import './Core.css'
 import { useState } from 'react'
-import Aos from 'aos';
-import 'aos/dist/aos.css'
+// import Aos from 'aos';
+// import 'aos/dist/aos.css'
 
 //import Logo from './synapselogo.jpg'
 //import IAF from './IAF.png'
 
 function Faculty() {
-    useEffect(
-        ()=>{
-            Aos.init({duration:2000});
-        },[]
-    )
+    // useEffect(
+    //     ()=>{
+    //         Aos.init({duration:2000});
+    //     },[]
+    // )
     const [displaycore, setDisplaycore] = useState([]);
     const fetchApi = () => {
         fetch("https://synapseop.pythonanywhere.com/core/")
