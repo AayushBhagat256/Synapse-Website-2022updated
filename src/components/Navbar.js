@@ -25,7 +25,7 @@ function Navbar() {
               </li>
               <li class="nav-item dropdown">
               <Link class="nav-link active dropdown-toggle" to="#" id='drop' role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               <b>DropDown</b>
+               <b> Team</b>
           </Link>
           <ul class="dropdown-menu dropdown-menu-light bg-light">
             <li><Link class="dropdown-item" to="/faculty">Faculty</Link></li>

@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react'
 import './Core.css'
 import { useState } from 'react'
-// import Aos from 'aos';
-// import 'aos/dist/aos.css'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 //import Logo from './synapselogo.jpg'
 //import IAF from './IAF.png'
 
 function Faculty() {
-    // useEffect(
-    //     ()=>{
-    //         Aos.init({duration:2000});
-    //     },[]
-    // )
+    useEffect(
+        ()=>{
+            Aos.init({duration:2000});
+        },[]
+    )
     const [displaycore, setDisplaycore] = useState([]);
     const fetchApi = () => {
         fetch("https://synapseop.pythonanywhere.com/core/")
@@ -40,12 +40,12 @@ function Faculty() {
         <div className='core'>
             <div className="container">
                 <h1 className='hello1core'>Core Members</h1>
-                <div data-aos="fade-up" className="row">
+                <div  className="row">
                     {displaycore.map(map =>
                         <div  className="col-md-4" key={map.SapId}>
                             {/* <h1>hello</h1> */}
                             <div  className="anime">
-                            <div  class="card card-inverse card-primary text-center " style={{ width: "23rem" }}>
+                            <div data-aos="fade-up" class="card card-inverse card-primary text-center " style={{ width: "23rem" }}>
                                 <img src={imgurl + map.Profilepic} class="card-img-top" id='imgss' alt=""  />
                                 <div class="card-body">
                                     <h3 class="card-title" id='namee'>{map.Fname} {map.Lname}</h3>
