@@ -2,6 +2,7 @@
     height: 100vh;
     display: flex;
     align-items: center;
+    padding: 20px;
   }
   
   .a-left {
@@ -16,7 +17,6 @@
     padding:20px 30px;
     margin:100px 0;
     /* margin-top: 100px;
-    margin-left: 20px;
     margin-bottom: 100px;
     margin-right: 0; */
     flex-wrap : wrap;
