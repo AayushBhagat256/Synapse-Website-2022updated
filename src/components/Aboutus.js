@@ -6,7 +6,7 @@ const About = () => {
     <div className="a">
       <div className="a-left">
         <p className="a-desc">
-          <h1 className="a-title container">ABOUT US</h1>
+          <h1 className="a-title container">About us</h1>
           Founded in 2020 out of passion for the AI/ML domain we are Synapse ,
           The official AI/ML club of DJ Sanghvi working on ML projects,
           researching on various topics and having fun in the process. Synapse

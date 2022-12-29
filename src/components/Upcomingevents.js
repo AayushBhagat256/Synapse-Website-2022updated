@@ -31,7 +31,7 @@ const Upcomingevents = () => {
       <h1 className='uptitle'><b>Upcoming Events</b></h1>
       {
         newevents.map(card=>
-          <div class='ecard mx-4' key={card.id}>
+          <div class='ecard' key={card.id}>
            
           <img src={imgurl1 +card.images[0]} className='eimg' alt=''></img>
           {console.log(imgurl1+card.images[0])}
