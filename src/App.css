@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 .App{
-  background-image: url('./components/bgimg2.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
+  /* background-image: url('./components/bgimg2.jpg'); */
+      /* background-repeat: no-repeat; */
+      /* background-attachment: fixed; */
+      /* background-size: cover; */
+      background-color: #0A2647;
       /* background-position: center; */
       height:auto;
       width: 100vw;
@@ -55,4 +57,14 @@
   border-radius: 0.5rem;
   border: 0.2rem solid transparent;
   background-clip: content-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
