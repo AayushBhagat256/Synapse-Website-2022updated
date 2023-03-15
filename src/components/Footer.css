@@ -11,7 +11,7 @@
     min-height: 100vh;
     background-color: #333;
 }*/
-footer{
+.noclash{
     position: relative;
     width: 100%;
     background-color: rgba(25, 100, 197, 0.496);
@@ -20,8 +20,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 .tagline{
     font-size: 20px;

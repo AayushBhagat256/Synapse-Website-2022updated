@@ -6,7 +6,7 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer >
+    <footer className='noclash'>
       <div className="siuu">
         <h3 class="tagline">Teaching Machines to Learn</h3>
         <ul class="icons">

@@ -7,6 +7,10 @@ import Core from './components/Core';
 import Aboutus from './components/Aboutus';
 import Excore from './components/Excore';
 import Projects from './components/Projects';
+import * as React from 'react'
+
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react'
 import {
   BrowserRouter as Router,
   //Switch,
@@ -16,11 +20,13 @@ import {
 } from "react-router-dom";
 import Upcomingevents from './components/Upcomingevents';
 import Timeline from './components/Timeline';
+import Project2 from './components/Project2';
 //import Upcoming from './components/Upcoming';
 
 function App() {
   return (
     <Router>
+       <ChakraProvider>
       <>
         <div className="App">
           <Navbar />
@@ -60,7 +66,8 @@ function App() {
             
             <div className="projects">
             <Routes>
-            <Route path='/project' element={<Projects />} />
+            {/* <Route path='/project' element={<Projects />} /> */}
+            <Route path='/project' element={<Project2/>}/>
           </Routes>
 
               
@@ -93,6 +100,7 @@ function App() {
 
 
       </>
+      </ChakraProvider>
     </Router>
   )
 }

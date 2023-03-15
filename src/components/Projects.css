@@ -2,6 +2,9 @@
     text-align: center;
     color: #81C6E8;
 }
+.cardheader{
+    color: black;
+}
 .Project-cards {
     text-align: center;
     /* width: 45vw; */

@@ -1,0 +1,12 @@
+
+.project2card{
+    border: none;
+    background: rgba(84, 84, 142, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(91, 38, 135, 0.37);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+
+    border-radius: 2em;
+    border: 1px solid rgba(97, 149, 187, 0.555);
+    overflow: hidden; 
+}

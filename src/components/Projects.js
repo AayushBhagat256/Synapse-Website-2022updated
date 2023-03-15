@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import './Projects.css'
 import { FaRegFilePdf } from 'react-icons/fa';
+import Project2 from './Project2';
 function Projects() {
   const [displayProjects, setProjects] = useState([]);
   const fetchApi = () => {
@@ -38,6 +39,7 @@ function Projects() {
           </div>
         ))}
       </div>
+      <Project2/>
     </>
 
 
