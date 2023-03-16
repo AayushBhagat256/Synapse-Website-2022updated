@@ -1,0 +1,9 @@
+.basic{
+    background-image: url('https://i.pinimg.com/originals/65/ba/48/65ba488626025cff82f091336fbf94bb.gif');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    color: aliceblue;
+}
