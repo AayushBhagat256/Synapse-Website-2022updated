@@ -6,8 +6,17 @@ import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className='noclash'>
-      <div className="siuu">
+    <div className='noclash'>
+      <div className="webfooter">
+        <div className='menufooter'>
+        <ul class="menu">
+        <h4>Quick links</h4>
+            <li><a href="/">About us</a></li>
+            <li><a href="/project">Projects</a></li>
+            <li><a href="/timeline">Events</a></li>
+        </ul>
+        </div>
+        <div className='footercontent'>
         <h3 class="tagline">Teaching Machines to Learn</h3>
         <ul class="icons">
             <li><a href="https://github.com/Synapse-DJSCE" ><FaGithub/></a></li>
@@ -17,13 +26,12 @@ const Footer = () => {
         <div class="contact">
             <p>Want to get in touch with us? Send a <a href="/contactus"><b>Message</b></a></p>
         </div>
-        <ul class="menu">
-            <li><a href="/">About us</a></li>
-            <li><a href="/project">Projects</a></li>
-            <li><a href="/timeline">Events</a></li>
-        </ul>
         </div>
-    </footer>
+        
+        
+        
+        </div>
+    </div>
   )
 }
 

@@ -15,26 +15,41 @@
     position: relative;
     width: 100%;
     background-color: rgba(25, 100, 197, 0.496);
-    min-height: 200px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
+    /* min-height: 200px; */
+    padding: 10px 30px;
+    /* display: flex; */
+    /* justify-content: center;
     align-items: center;
-    flex-direction: column;  
+    flex-direction: column;   */
 }
+.webfooter{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.footercontent{
+    /* flex-grow: 2; */
+    margin: 10px 150px;
+}
+.menufooter{
+    margin: 10px 150px;
+    
+}
+
 .tagline{
     font-size: 20px;
     color: white;
     opacity: 0.85;
     text-align: center;
 }
-.icons,.menu{
+.icons{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 7px 0px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .icons li,.menu li{
     list-style: none;
@@ -53,12 +68,13 @@
     font-size: 15px;
     color: rgba(255, 255, 255, 0.664);
     margin: 0px 7px;
-    display: inline-block;
+    align-items:center;
     text-decoration: none;
     opacity: 0.8;
 }
 .contact{
     margin: 7px 0;
+    text-align: center;
 }
 .contact p{
     color: rgba(255, 255, 255, 0.664);

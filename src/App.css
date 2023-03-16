@@ -23,8 +23,9 @@
   display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    min-height: 25vh;
-    background-color: black;
+    /* min-height: 25vh; */
+    background-color:#0A2647;
+    ;
 }
 .upevents{
   margin: 0;
