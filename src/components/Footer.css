@@ -30,11 +30,16 @@
 }
 .footercontent{
     /* flex-grow: 2; */
-    margin: 10px 150px;
+    margin: 10px 50px;
+    align-items: center;
 }
 .menufooter{
-    margin: 10px 150px;
-    
+    margin: 10px 50px;
+    align-items: center;
+    justify-content: center;
+}
+.fhead{
+    text-align: center;
 }
 
 .tagline{
@@ -71,6 +76,10 @@
     align-items:center;
     text-decoration: none;
     opacity: 0.8;
+    /* text-align: center; */
+}
+.menu li{
+    text-align: center;
 }
 .contact{
     margin: 7px 0;

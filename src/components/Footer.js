@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="webfooter">
         <div className='menufooter'>
         <ul class="menu">
-        <h4>Quick links</h4>
+        <h4 className='fhead'>Quick links</h4>
             <li><a href="/">About us</a></li>
             <li><a href="/project">Projects</a></li>
             <li><a href="/timeline">Events</a></li>
