@@ -42,7 +42,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 40vh;
+    height: auto;
     width: 20px;
    /*background-color:brown;*/
     padding:20px 30px;
