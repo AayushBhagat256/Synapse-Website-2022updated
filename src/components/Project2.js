@@ -52,7 +52,7 @@ function Project2() {
   )
   return (
     <div>
-      <Heading size='md' style={{textAlign:'center'}}>Here Are few projects...</Heading>
+      <Heading size='md' style={{textAlign:'center'}}>Some of our projects are...</Heading>
       <br />
       <SimpleGrid spacing={4} columns={{ base: 1, md: 2, md: 3 }} style={{padding:'6px'}}>
         {

@@ -3,6 +3,7 @@ import './Core.css'
 import { useState } from 'react'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import { SimpleGrid } from '@chakra-ui/react';
 
 //import Logo from './synapselogo.jpg'
 //import IAF from './IAF.png'
@@ -41,6 +42,7 @@ function Faculty() {
             <div className="container">
                 <h1 className='hello1core'>Core Members</h1>
                 <div  className="row">
+                {/* <SimpleGrid spacing={4} columns={{ base: 1, md: 2, md: 3 }} style={{padding:'6px'}}> */}
                     {displaycore.map(map =>
                         <div  className="col-md-4" key={map.SapId}>
                             {/* <h1>hello</h1> */}
@@ -63,6 +65,7 @@ function Faculty() {
                     )
 
                     }
+                    {/* </SimpleGrid> */}
 
                 </div>
             </div>

@@ -3,7 +3,7 @@ import './Loader.css'
 
 function Loader() {
   return (
-    <div className='basic'>
+    <div className='basic' style={{margin:'auto',width:'60%'}}>
       <p>Loading please wait</p>
     </div>
   )
