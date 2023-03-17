@@ -38,7 +38,7 @@ function Faculty() {
     return (
         <div className='faculty'>
             <div className="container">
-                <h1 className='hello1'>Faculty Members</h1>
+                <h1 className='hello1' style={{fontSize:35}}>Faculty Members</h1>
                 <div className="row ">
                     {display.slice(0,2).map(map =>
                         <div className="col-md-4" key={map.id}>

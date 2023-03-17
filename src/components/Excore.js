@@ -37,7 +37,7 @@ function Excore() {
         <div className='excore'>
             
             <div className="container">
-                <h1 className='hello1excore'>Founders</h1>
+                <h1 className='hello1excore' style={{fontSize:35}}>Founders</h1>
                 <div className="row">
                     {displayexcore.map(map =>
                         <div className="col-md-4" key={map.SapId}>

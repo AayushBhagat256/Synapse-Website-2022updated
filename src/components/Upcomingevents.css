@@ -6,7 +6,10 @@
     position: relative;
     overflow: hidden;
     padding: 0;
-    margin: 20px 0;
+    margin: auto;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .uptitle{
     text-align: center;

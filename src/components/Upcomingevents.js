@@ -28,7 +28,7 @@ const Upcomingevents = () => {
   
   return (
     <div>
-      <h1 className='uptitle'><b>Upcoming Events</b></h1>
+      <h1 className='uptitle' style={{fontSize:45,textAlign:'center'}}><b>Upcoming Events</b></h1>
       {
         newevents.map(card=>
           <div class='ecard' key={card.id}>

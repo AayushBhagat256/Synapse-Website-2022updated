@@ -68,7 +68,7 @@ function Timeline() {
     )
     return (
         <div>
-            <h1 className='etimetitle'><b>Events</b></h1>
+            <h1 className='etimetitle' style={{fontSize:35}}><b>Events</b></h1>
             {
                 events.map(event =>
                     <div class="timeline">

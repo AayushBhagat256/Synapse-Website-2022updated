@@ -39,7 +39,7 @@ function Faculty() {
     return (
         <div className='core'>
             <div className="container">
-                <h1 className='hello1core'>Core Members</h1>
+                <h1 className='hello1core' style={{fontSize:35}}>Core Members</h1>
                 <div  className="row">
                     {displaycore.map(map =>
                         <div  className="col-md-4" key={map.SapId}>
