@@ -5,7 +5,8 @@ import mlimg6 from './mlimg6.png';
 
 const About = () => {
   return (
-    <><div className="a">
+    <>
+    <div className="a">
       <div className="a-left">
         <p className="a-desc">
           <h1 className="a-title container">ABOUT US</h1>
