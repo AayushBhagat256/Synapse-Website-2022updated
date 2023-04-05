@@ -7,13 +7,7 @@ import {
   SimpleGrid, Heading, Text, Button
 } from '@chakra-ui/react'
 import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
+  
   useDisclosure
 } from '@chakra-ui/react'
 import Aos from 'aos';
@@ -71,27 +65,6 @@ function Project2() {
               <a href={map.link}><Button  style={{ background: 'transparent', border: '1px solid rgba(97, 149, 187, 0.555)', borderRadius: '2em',textDecoration:'none',color:'#ECF9FF' }}>Read more</Button></a>
               
             </CardFooter>
-            {/* <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
-              <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody pb={12}>
-                  <Text fontWeight='bold' mb='1rem'>
-                  {map.description}
-                  </Text>
-                </ModalBody>
-  
-                <ModalFooter>
-                  <Button colorScheme='blue' mr={3} onClick={onClose}>
-                    Close
-                  </Button>
-                  <a href={map.link}><Button variant='ghost'>Download</Button></a>
-                  
-                </ModalFooter>
-              </ModalContent>
-            </Modal> */}
-  
           </Card>
             ))
           )
