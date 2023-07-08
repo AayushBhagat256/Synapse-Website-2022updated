@@ -35,20 +35,24 @@ function Core() {
   console.log(coreData)
   return (
     <ChakraProvider>
+      <Heading textAlign={'center'} fontSize={'43px'}>Core</Heading>
+      <br />
       <Center>
-        <Heading>Core</Heading>
+        {/* <br /> */}
+        <SimpleGrid gap={'12'} columns={{ base: 1, md: 3 }}>
+          {
+            coreData.map(map => {
+              return (
+                <ContentCard image={map.Profilepic} name={map.Fname + " " + map.Lname} post={map.Position}
+                  github={map.fk_contactid.github} gmail={map.fk_contactid.email} LinkedIn={map.fk_contactid.linkedin} Instagram={map.fk_contactid.insta}
+                  testimonial={map.testimonial} />
+              )
+            })
+          }
+        </SimpleGrid>
       </Center>
-      <SimpleGrid gap={'6'} columns={{ base: 1, md: 3 }}>
-        {
-          coreData.map(map => {
-            return (
-              <ContentCard image={map.Profilepic} name={map.Fname + " " + map.Lname} post={map.Position}
-                github={map.fk_contactid.github} gmail={map.fk_contactid.email} LinkedIn={map.fk_contactid.linkedin} Instagram={map.fk_contactid.insta}
-                testimonial={map.testimonial} />
-            )
-          })
-        }
-      </SimpleGrid>
+      {/* <br /> */}
+
     </ChakraProvider>
   )
 }

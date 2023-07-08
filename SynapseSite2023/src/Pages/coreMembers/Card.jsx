@@ -51,9 +51,9 @@ const SocialButton = ({
 export default function ContentCard(props) {
     const k = "https://synapseop.pythonanywhere.com/"
     return (
-        <Center py={6}>
+        <Center py={0}>
             <Box
-                maxW={'445px'}
+                maxW={'400px'}
                 w={'full'}
                 bg={useColorModeValue('white', 'gray.900')}
                 boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'}
@@ -78,13 +78,14 @@ export default function ContentCard(props) {
                 <Stack>
                     <Heading
                         color={useColorModeValue('gray.700', 'white')}
-                        fontSize={'2xl'}
+                        fontSize={'18px'}
+                        fontWeight={600}
                         fontFamily={'body'}>
                         {props.name}
                     </Heading>
                     <Text
-                        fontWeight={800}
-                        fontSize={'sm'}
+                        fontWeight={400}
+                        fontSize={'14px'}
                         letterSpacing={1.1}>
                         {props.post}
                     </Text>
