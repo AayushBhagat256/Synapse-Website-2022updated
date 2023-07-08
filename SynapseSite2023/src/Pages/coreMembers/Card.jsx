@@ -48,7 +48,8 @@ const SocialButton = ({
 };
 
 
-export default function ContentCard() {
+export default function ContentCard(props) {
+    const k = "https://synapseop.pythonanywhere.com/"
     return (
         <Center py={6}>
             <Box
@@ -60,17 +61,18 @@ export default function ContentCard() {
                 p={6}
                 overflow={'hidden'}>
                 <Box
-                    h={'auto'}
+                    // h={'auto'}
                     bg={'gray.100'}
                     mt={-6}
                     mx={-6}
                     mb={6}
                     pos={'relative'}>
                     <Image
-                        src={
-                            'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                        }
-                        layout={'fill'}
+                        src={k + props.image}
+                        // layout={'fill'}
+                        maxW={'445px'}
+                        w={'full'}
+                        objectFit={'cover'}
                     />
                 </Box>
                 <Stack>
@@ -78,33 +80,30 @@ export default function ContentCard() {
                         color={useColorModeValue('gray.700', 'white')}
                         fontSize={'2xl'}
                         fontFamily={'body'}>
-                        Aayush
+                        {props.name}
                     </Heading>
                     <Text
                         fontWeight={800}
                         fontSize={'sm'}
                         letterSpacing={1.1}>
-                        president
+                        {props.post}
                     </Text>
                     <Text color={'gray.500'}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                        erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-                        et ea rebum.
+                        {props.testimonial}
                     </Text>
                 </Stack>
                 <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
                     <Stack direction={'row'} spacing={6}>
-                        <SocialButton label={'LinkedIn'} href={'#'}>
+                        <SocialButton label={'LinkedIn'} href={props.LinkedIn}>
                             <FaLinkedin />
                         </SocialButton>
-                        <SocialButton label={'Gmail'} href={'#'}>
+                        <SocialButton label={'Gmail'} href={'mailto:' + props.gmail}>
                             <BiLogoGmail />
                         </SocialButton>
-                        <SocialButton label={'Instagram'} href={'#'}>
+                        <SocialButton label={'Instagram'} href={props.Instagram}>
                             <FaInstagram />
                         </SocialButton>
-                        <SocialButton label={'Github'} href={'#'}>
+                        <SocialButton label={'Github'} href={props.github}>
                             <FaGithub />
                         </SocialButton>
                     </Stack>
