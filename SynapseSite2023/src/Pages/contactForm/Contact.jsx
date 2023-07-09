@@ -17,6 +17,7 @@ import {
   InputLeftElement,
   Textarea,
   ChakraProvider,
+  SimpleGrid,
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -25,56 +26,81 @@ import {
   MdFacebook,
   MdOutlineEmail,
 } from 'react-icons/md';
+import './Contact.css'
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 export default function Contact() {
   return (
     <ChakraProvider>
       <Container bg="#fff" maxW="full" mt={0} centerContent overflow="hidden">
-        <Heading>Send Us a Message</Heading>
+        <Flex>
+          <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="122" height="95" viewBox="0 0 122 95" fill="none">
+            <g clip-path="url(#clip0_1092_157)">
+              <path d="M111.044 32.4334C98.4985 30.111 91.007 30.7977 83.5784 41.6568C78.8699 48.5396 75.1692 57.8678 74.4567 66.2143C74.0437 71.0522 78.6416 64.855 79.3851 63.5966C87.9874 49.0375 87.494 29.3851 74.8936 17.2852C66.6816 9.39935 57.1609 13.4434 49.9316 20.4665C38.9068 31.1768 35.6651 47.9776 37.009 62.7815C37.4561 67.7061 37.9508 82.6933 44.4328 84.1655C49.8033 85.3853 49.0485 75.6507 48.6759 72.7124C48.1448 68.5232 46.6777 59.5163 42.7517 57.1144C37.121 53.6698 30.2291 62.2643 27.9933 66.2697C23.7477 73.8761 21.8128 83.5705 19.4952 91.9214C19.3246 92.5363 22.1742 89.6987 22.6772 89.2068C24.1185 87.7982 26.07 87.038 27.3914 85.5031C28.3717 84.3642 32.2107 77.2539 28.0939 80.5741C26.6429 81.7443 21.2818 92.2943 20.8545 92.1701C19.1085 91.6642 16.4875 80.2721 16.0196 78.1628C14.8936 73.0831 24.2354 80.0702 25.3274 81.2002" stroke="black" stroke-width="2" stroke-linecap="round" />
+            </g>
+            <defs>
+              <clipPath id="clip0_1092_157">
+                <rect width="106" height="67" fill="white" transform="translate(121.069 65.4727) rotate(164.361)" />
+              </clipPath>
+            </defs>
+          </svg>
+          <Heading>Send Us a Message</Heading>
+        </Flex>
         <Flex>
           <Box
-            bg="fff" //inside color
+            bg="#fff" //inside color
             color="black"
             borderRadius="lg"
+            // p={{ sm: 5, md: 5, lg: 16 }}
             m={{ sm: 4, md: 16, lg: 10 }}
-            p={{ sm: 5, md: 5, lg: 16 }}>
+          >
             <Box p={0} mt={0}>
               {/* <Wrap spacing={{ base: 20, sm: 3, md: 5, lg: 20 }}> */}
-              <Flex gap={12} mt={0}>
+              <SimpleGrid gap={12} columns={{ base: 1, md: 2 }} mt={0}>
 
                 <WrapItem>
-                  <Box border={'1px solid #F2F4F7'} boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'} borderRadius="lg" width={'500px'}>
+                  <Box border={'1px solid #F2F4F7'} boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'} borderRadius="lg" width={'500px'} ml={{ base: 5 }} textAlign={'center'} id='conbox'>
                     <Box m={8} color="#0B0E3F">
                       <VStack spacing={5}>
                         <FormControl id="name">
-                          <FormLabel>Your Name</FormLabel>
-                          <InputGroup borderColor="#E0E1E7" width={'400px'}>
+                          {/* <FormLabel>Your Name</FormLabel> */}
+                          <InputGroup borderColor="#E0E1E7" className='inpfie'>
                             <InputLeftElement
                               pointerEvents="none"
                               children={<BsPerson color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input type="text" placeholder='Name' size="md" />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
-                          <FormLabel>Mail</FormLabel>
-                          <InputGroup borderColor="#E0E1E7" width={'400px'}>
+                          {/* <FormLabel>Mail</FormLabel> */}
+                          <InputGroup borderColor="#E0E1E7" className='inpfie'>
                             <InputLeftElement
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input type="text" size="md" />
+                            <Input type="text" size="md" placeholder='Email' />
+                          </InputGroup>
+                        </FormControl>
+                        <FormControl id="name">
+                          {/* <FormLabel>Phone</FormLabel> */}
+                          <InputGroup borderColor="#E0E1E7" className='inpfie'>
+                            <InputLeftElement
+                              pointerEvents="none"
+                              children={<MdPhone color="gray.800" />}
+                            />
+                            <Input type="text" size="md" placeholder='Phone' />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name" >
-                          <FormLabel>Message</FormLabel>
+                          {/* <FormLabel>Message</FormLabel> */}
                           <Textarea
                             borderColor="gray.300"
                             _hover={{
                               borderRadius: 'gray.300',
                             }}
-                            width={'400px'}
+                            className='inpfie'
                             placeholder="message"
                           />
                         </FormControl>
@@ -93,78 +119,58 @@ export default function Contact() {
                 </WrapItem>
 
                 <WrapItem>
-                  <Box bg={'linear-gradient(180deg, #81C6E8 0%, rgba(129, 198, 232, 0.43) 100%)'} width={'500px'} textAlign={'center'}>
-                    <Heading>Contact us at</Heading>
-                    <Text mt={{ sm: 3, md: 3, lg: 5 }} color="gray.500">
-                      Fill up the form below to contact
+                  <Box bg={'linear-gradient(180deg, #81C6E8 0%, rgba(129, 198, 232, 0.43) 100%)'} boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'} className='infobox' borderRadius={'lg'} id='conbox'  >
+                    <Heading ml={'40px'} >Contact us at</Heading>
+                    <Text ml={'40px'} mt={{ sm: 2, md: 2, lg: 2 }} color="gray.500">
+                      Get in touch with us..
                     </Text>
                     <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} spacing={3} alignItems="center">
+                      <VStack pl={0} ml={{ base: 0, md: 5 }} align={'flex-start'} spacing={3} >
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                          width="auto"
                           variant="ghost"
                           color="black"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdPhone color="#1970F1" size="20px" />}>
+                          leftIcon={<MdPhone size="20px" />}>
                           +91-988888888
                         </Button>
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                          width="auto"
                           variant="ghost"
                           color="black"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdEmail color="#1970F1" size="20px" />}>
+                          leftIcon={<MdEmail size="20px" />}>
                           hello@abc.com
                         </Button>
                         <Button
                           size="md"
                           height="48px"
-                          width="200px"
+                          width="auto"
                           variant="ghost"
                           color="black"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdLocationOn color="#1970F1" size="20px" />}>
-                          Karnavati, India
+                          leftIcon={<MdLocationOn size="20px" />}>
+                          Mumbai , India
+                        </Button>
+                        <Button
+                          size="md"
+                          height="48px"
+                          width="auto"
+                          variant="ghost"
+                          color="black"
+                          _hover={{ border: '2px solid #1C6FEB' }}
+                          leftIcon={<FaLinkedinIn size="20px" />}>
+                          www.linkedin.com/company/djs-synapse/
                         </Button>
                       </VStack>
                     </Box>
-                    <HStack
-                      mt={{ lg: 10, md: 10 }}
-                      spacing={5}
-                      px={5}
-                      alignItems="flex-start">
-                      <IconButton
-                        aria-label="facebook"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: '#0D74FF' }}
-                        icon={<MdFacebook size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="github"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: '#0D74FF' }}
-                        icon={<BsGithub size="28px" />}
-                      />
-                      <IconButton
-                        aria-label="discord"
-                        variant="ghost"
-                        size="lg"
-                        isRound={true}
-                        _hover={{ bg: '#0D74FF' }}
-                        icon={<BsDiscord size="28px" />}
-                      />
-                    </HStack>
                   </Box>
                 </WrapItem>
-              </Flex>
+              </SimpleGrid>
               {/* </Wrap> */}
             </Box>
           </Box>

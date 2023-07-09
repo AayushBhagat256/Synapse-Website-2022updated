@@ -1,0 +1,30 @@
+#conbox{
+    padding: 30px;
+    /* width: 500px; */
+}
+.inpfie{
+    width: 400px;
+}
+.infobox{
+    width: 500px;
+    overflow: hidden;
+    /* overflow-wrap: break-word; */
+}
+
+@media (max-width:800px){
+    #conbox{
+        padding: 0px;
+        /* width: auto; */
+    }
+    .inpfie{
+        width: 200px;
+    }
+    .infobox{
+        width: 400px;
+        overflow: overlay;
+        /* overflow-inline: 300px; */
+    }
+    .arrow{
+        transform: rotate(-7.639deg);
+    }
+}
