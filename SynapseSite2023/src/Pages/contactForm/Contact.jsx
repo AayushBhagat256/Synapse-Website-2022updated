@@ -33,7 +33,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 export default function Contact() {
   return (
     <ChakraProvider>
-      <Container bg="#fff" maxW="full" mt={0} centerContent overflow="hidden">
+      <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="122" height="95" viewBox="0 0 122 95" fill="none">
             <g clip-path="url(#clip0_1092_157)">
@@ -49,7 +49,7 @@ export default function Contact() {
         </Flex>
         <Flex>
           <Box
-            bg="#fff" //inside color
+            //inside color
             color="black"
             borderRadius="lg"
             // p={{ sm: 5, md: 5, lg: 16 }}

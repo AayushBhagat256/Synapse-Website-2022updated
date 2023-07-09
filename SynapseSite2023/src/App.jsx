@@ -6,6 +6,7 @@ import Core from './Pages/coreMembers/core'
 import Excore from './Pages/exCoreMembers/Excore'
 import Faculty from './Pages/facultyMembers/Faculty'
 import Contact from './Pages/contactForm/Contact'
+import Loader from './Components/Loader/Loader'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +28,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/contact' element={<Contact/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/load' element={<Loader/>}/>
         </Routes>
       </Router>
     </>

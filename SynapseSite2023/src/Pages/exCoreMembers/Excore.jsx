@@ -5,9 +5,11 @@ import {
 } from '@chakra-ui/react'
 import ContentCard from './Card'
 import axios from 'axios'
+import Loader from '../../Components/Loader/Loader'
 
 function Excore() {
   const [coreData, setCoreData] = useState([])
+  const [loading,setLoading] = useState(false)
   useEffect(
     () => {
       CoreDataApi()
@@ -26,6 +28,7 @@ function Excore() {
       .then((response) => {
         console.log(JSON.stringify(response.data));
         setCoreData(response.data.payload)
+        setLoading(true)
       })
       .catch((error) => {
         console.log(error);
@@ -36,7 +39,8 @@ function Excore() {
   return (
     <div>
       <ChakraProvider>
-        <Heading textAlign={'center'} fontSize={'43px'}>Founders</Heading>
+      {
+        loading?(<><Heading textAlign={'center'} fontSize={'43px'}>Founders</Heading>
         <br />
         <Center>
           {/* <br /> */}
@@ -52,7 +56,9 @@ function Excore() {
             }
           </SimpleGrid>
         </Center>
-        {/* <br /> */}
+        </>
+        ):(<Loader/>)
+      }
 
       </ChakraProvider>
     </div>
