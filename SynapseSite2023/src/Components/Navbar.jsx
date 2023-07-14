@@ -3,6 +3,7 @@ import './Navbar.css'
 import logo from './synapselogo.png';
 import { LuAlignJustify } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const[Mobile , setMobile] = useState(false)
@@ -16,7 +17,8 @@ function Navbar() {
               <a>Team</a>
               <a>Projects</a>
               <a>Events</a>
-              <a>Contact us</a>
+              <Link to='/contact'>Contact us</Link>  
+              {/* plz dont do anything in this link (from ~Aayush) */}
           </ul>
           <button className='hamburgericon' onClick={()=> setMobile(!Mobile)}>
               { Mobile? <RxCross2/> : <LuAlignJustify/>}
