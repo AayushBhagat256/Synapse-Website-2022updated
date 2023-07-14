@@ -1,11 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './Navbar.css'
+import logo from './synapselogo.png';
+import { LuAlignJustify } from "react-icons/lu";
+import { RxCross2 } from "react-icons/rx";
 
 function Navbar() {
-  return (
-    <div>
-      Navbar here
-    </div>
+  const[Mobile , setMobile] = useState(false)
+  return(
+      <>
+      <nav className='navbar'>
+          <div className='container'> 
+          <img src={logo} alt='logo' className='logo'></img>
+          <ul className = {Mobile ? 'mobilelinks':'links'} onClick={()=> setMobile(!Mobile)}>
+              <a>Home</a>
+              <a>Team</a>
+              <a>Projects</a>
+              <a>Events</a>
+              <a>Contact us</a>
+          </ul>
+          <button className='hamburgericon' onClick={()=> setMobile(!Mobile)}>
+              { Mobile? <RxCross2/> : <LuAlignJustify/>}
+          </button>
+          </div>
+      </nav>
+      </>
   )
 }
-
-export default Navbar
+export default Navbar;
