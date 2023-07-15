@@ -6,6 +6,7 @@ import {
 import ContentCard from './Card'
 import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
+import Navbar from '../../Components/Navbar'
 
 function Excore() {
   const [coreData, setCoreData] = useState([])
@@ -38,6 +39,7 @@ function Excore() {
   console.log(coreData)
   return (
     <div>
+      <Navbar/>
       <ChakraProvider>
       {
         loading?(<><Heading textAlign={'center'} fontSize={'43px'}>Founders</Heading>
