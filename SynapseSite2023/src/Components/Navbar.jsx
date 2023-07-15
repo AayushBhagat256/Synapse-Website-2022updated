@@ -6,17 +6,30 @@ import { RxCross2 } from "react-icons/rx";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+    const [Open, setOpen] = useState(false)
   const[Mobile , setMobile] = useState(false)
   return(
       <>
       <nav className='navbar'>
           <div className='container'> 
           <img src={logo} alt='logo' className='logo'></img>
-          <ul className = {Mobile ? 'mobilelinks':'links'} onClick={()=> setMobile(!Mobile)}>
-              <a>Home</a>
-              <a>Team</a>
-              <a>Projects</a>
-              <a>Events</a>
+          <ul className = {Mobile ? 'mobilelinks':'links'} >
+              <li>Home</li>
+              <li  onClick={()=> setOpen(!Open)}> Teams
+                            {
+                                Open && (
+                                    <div className='dropdowndiv'>
+                                        <ul className='dropdown'>
+                                        <li> Faculty </li>
+                                        <li> Core </li>
+                                        <li> Ex-core </li>
+                                    </ul>
+                                    </div>
+                                )
+                            }
+                        </li>
+              <li>Projects</li>
+              <li>Events</li>
               <Link to='/contact'>Contact us</Link>  
               {/* plz dont do anything in this link (from ~Aayush) */}
           </ul>

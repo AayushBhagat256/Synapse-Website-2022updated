@@ -23,12 +23,33 @@ li{
     justify-content: space-between;
     align-items: center;
 }
-.links a{
+.links li{
     color: #1a1a1a;
     font-size: 18px;
     font-weight: 600;
     padding: 0 10px;
     margin: 0 10px;
+    cursor: pointer;
+}
+.dropdown{
+    background-color: white;
+    width: 200px;
+    box-shadow: 5px 10px 20px rgba(129, 198, 232, 0.30);
+    position: absolute;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.dropdownicon{
+    font-size: 30px;
+    padding-top: 20px;
+    position: relative;
+}
+.dropdown li{
+    font-size: 16px;
+}
+.dropdown li:hover{
+    background-color: rgba(129, 198, 232, 0.41);
+    border-radius: 5px;
 }
 button{
     border: none;
@@ -63,7 +84,7 @@ a:hover{
         width: 100%;
         background-color: white;
     }
-    ul a{
+    ul li{
         font-weight: 600;
         display: block;
         padding: 10px;
@@ -79,5 +100,28 @@ a:hover{
     }
     .logo{
         height: 50px;
+    }
+    .dropdown{
+        background-color: white;
+        width: 200px;
+        box-shadow: 5px 10px 20px rgba(129, 198, 232, 0.30);
+        position: absolute;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .dropdowndiv{
+        margin-left: 25%;
+    }
+    .dropdownicon{
+        font-size: 30px;
+        padding-top: 20px;
+        position: relative;
+    }
+    .dropdown li{
+        font-size: 16px;
+    }
+    .dropdown li:hover{
+        background-color: rgba(129, 198, 232, 0.41);
+        border-radius: 5px;
     }
 }
