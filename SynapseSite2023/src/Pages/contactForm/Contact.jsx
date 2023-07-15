@@ -18,6 +18,7 @@ import {
   Textarea,
   ChakraProvider,
   SimpleGrid,
+  useToast,
 } from '@chakra-ui/react';
 import {
   MdPhone,
@@ -30,11 +31,61 @@ import './Contact.css'
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa';
 import Navbar from '../../Components/Navbar';
+import axios from 'axios'
+import { useState } from 'react';
 
 export default function Contact() {
+  const toast = useToast()
+  const [name, setName] = useState()
+  const [email, setEmail] = useState()
+  const [number, setNumber] = useState()
+  const [msg, setMsg] = useState()
+  const sendMessage = () => {
+    // const axios = require('axios');
+    let data = JSON.stringify({
+      "name": name,
+      "email": email,
+      "number": number,
+      "message": msg
+    });
+
+    let config = {
+      method: 'post',
+      maxBodyLength: Infinity,
+      url: 'https://synapseop.pythonanywhere.com/sendMessage/',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: data
+    };
+
+    axios.request(config)
+      .then((response) => {
+        console.log(JSON.stringify(response.data));
+
+        toast({
+          position: 'top',
+          title: 'Your message has reached',
+          description: response.data.message,
+          status: 'success',
+          duration: 2500,
+          isClosable: true,
+        })
+
+        setEmail('')
+        setMsg('')
+        setName('')
+        setNumber('')
+
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+  }
   return (
     <ChakraProvider>
-      <Navbar/>
+      <Navbar />
       <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="122" height="95" viewBox="0 0 122 95" fill="none">
@@ -72,7 +123,7 @@ export default function Contact() {
                               pointerEvents="none"
                               children={<BsPerson color="gray.800" />}
                             />
-                            <Input type="text" placeholder='Name' size="md" />
+                            <Input type="text" value={name} onChange={e => setName(e.target.value)} placeholder='Name' size="md" />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -82,7 +133,7 @@ export default function Contact() {
                               pointerEvents="none"
                               children={<MdOutlineEmail color="gray.800" />}
                             />
-                            <Input type="text" size="md" placeholder='Email' />
+                            <Input type="text" value={email} onChange={e => setEmail(e.target.value)} size="md" placeholder='Email' />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name">
@@ -92,7 +143,7 @@ export default function Contact() {
                               pointerEvents="none"
                               children={<MdPhone color="gray.800" />}
                             />
-                            <Input type="text" size="md" placeholder='Phone' />
+                            <Input type="text" value={number} onChange={e => setNumber(e.target.value)} size="md" placeholder='Phone' />
                           </InputGroup>
                         </FormControl>
                         <FormControl id="name" >
@@ -103,11 +154,14 @@ export default function Contact() {
                               borderRadius: 'gray.300',
                             }}
                             className='inpfie'
+                            value={msg}
+                            onChange={e => setMsg(e.target.value)}
                             placeholder="message"
                           />
                         </FormControl>
                         <FormControl id="name" float="right">
                           <Button
+                            onClick={sendMessage}
                             variant="solid"
                             bg="#0D74FF"
                             color="white"
