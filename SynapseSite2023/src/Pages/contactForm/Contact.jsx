@@ -33,6 +33,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import Navbar from '../../Components/Navbar';
 import axios from 'axios'
 import { useState } from 'react';
+import Nav from '../../Components/Navigation/Nav';
 
 export default function Contact() {
   const toast = useToast()
@@ -85,7 +86,8 @@ export default function Contact() {
   }
   return (
     <ChakraProvider>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Nav/>
       <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="122" height="95" viewBox="0 0 122 95" fill="none">

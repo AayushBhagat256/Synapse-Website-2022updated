@@ -7,6 +7,7 @@ import ContentCard from './Card'
 import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
+import Nav from '../../Components/Navigation/Nav'
 
 function Core() {
   const [coreData, setCoreData] = useState([])
@@ -39,7 +40,8 @@ function Core() {
   console.log(coreData)
   return (
     <ChakraProvider>
-      <Navbar/>
+      {/* <Navbar/> */}
+      <Nav/>
       {
         loading?(<><Heading textAlign={'center'} fontSize={'43px'}>Core</Heading>
         <br />

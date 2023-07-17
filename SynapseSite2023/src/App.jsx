@@ -7,6 +7,7 @@ import Excore from './Pages/exCoreMembers/Excore'
 import Faculty from './Pages/facultyMembers/Faculty'
 import Contact from './Pages/contactForm/Contact'
 import Loader from './Components/Loader/Loader'
+import Nav from './Components/Navigation/Nav'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,9 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Navbar/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/nav' element={<Nav/>}/>
         </Routes>
         <Routes>
           <Route path='/core' element={<Core/>}/>
