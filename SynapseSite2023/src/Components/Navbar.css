@@ -1,127 +1,107 @@
-li{
-    text-decoration: none;
-    list-style: none;
-}
-.navbar{
-    line-height: 10vh;
-    height: 10vh;
-}
 .logo{
     line-height: 10vh;
-    height: 75px;
+    height: 70px;
     justify-content: flex-start;
 }
-.links{
+.navigation {
+    height: 10vh;
+    width: 100%;
     display: flex;
-    justify-content: flex-end;
-    width: 80%;
-}
-.container{
-    max-width: 95%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-.links li{
-    color: #1a1a1a;
+    position: relative;
+    padding: 40px 50px;
+    background-color: #fff;
+    color: black;
+  }
+  .links{
     font-size: 18px;
     font-weight: 600;
-    padding: 0 10px;
-    margin: 0 10px;
-    cursor: pointer;
-}
-.dropdown{
-    background-color: white;
-    width: 200px;
-    box-shadow: 5px 10px 20px rgba(129, 198, 232, 0.30);
-    position: absolute;
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-.dropdownicon{
-    font-size: 30px;
-    padding-top: 20px;
-    position: relative;
-}
-.dropdown li{
-    font-size: 16px;
-}
-.dropdown li:hover{
-    background-color: rgba(129, 198, 232, 0.41);
-    border-radius: 5px;
-}
-button{
-    border: none;
-    background: none;
-    font-size: 20px;
-}
-.hamburgericon{
-    font-size: 22px;
-    display: none;
-}
-a:hover{
-    color: #166BBD;
-}
-
-@media (max-width:768px) {
-    /* .logo{
-        display: flex;
-        position: absolute;
-        top: 15px;
-        left: 35px;
-    } */
-    .links{
-        display: none;
-    }
-    .mobilelinks{
-        position: absolute;
-        display: block;
-        list-style: none;
-        left:0;
-        top: 10%;
-        transition: all 0.5 ease-in-out;
-        width: 100%;
-        background-color: white;
-    }
-    ul li{
-        font-weight: 600;
-        display: block;
-        padding: 10px;
-        width: 100%;
-        transition: all 0.5 ease-in-out;
-        text-align: center;
-    }
+  }
+  .brand-name {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+  .navigation-menu {
+    margin-left: auto;
+  }
+  .navigation-menu ul {
+    display: flex;
+    padding: 0;
+  }
+  .navigation-menu li {
     
-    .hamburgericon{
-        position: absolute;
-        display: block;
-        right:20px;
+    list-style-type: none;
+    margin: 0 1rem;
+  }
+  .navigation-menu li a {
+    
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  }
+  .hamburger {
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+    .navbar{
+        background-color: #fff;
+        width: 100%;
     }
     .logo{
-        height: 50px;
+        left: 20px;
     }
-    .dropdown{
-        background-color: white;
-        width: 200px;
-        box-shadow: 5px 10px 20px rgba(129, 198, 232, 0.30);
+    .navigation-menu ul {
+        display: none;
+      }
+      .navigation-menu ul {
+        
         position: absolute;
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-    .dropdowndiv{
-        margin-left: 25%;
-    }
-    .dropdownicon{
-        font-size: 30px;
-        padding-top: 20px;
-        position: relative;
-    }
-    .dropdown li{
-        font-size: 16px;
-    }
-    .dropdown li:hover{
-        background-color: rgba(129, 198, 232, 0.41);
-        border-radius: 5px;
-    }
-}
+        top: 60px;
+        left: 0;
+        
+        flex-direction: column;
+      
+        width: 100%;
+        height: calc(100vh - 77px);
+        background-color: white;
+        
+      }
+      .navigation-menu li {
+        
+        text-align: center;
+        margin: 0;
+      }
+      .navigation-menu li a {
+        color: black;
+        
+        width: 100%;
+        padding: 1.5rem 0;
+      }
+      .navigation-menu li:hover {
+        background-color: #eee;
+      }
+      .navigation-menu ul {
+        /* previous styles */
+        display: none;
+      }
+      .navigation-menu.expanded ul {
+        display: block;
+        top: 100px;
+      }
+  }
