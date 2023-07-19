@@ -19,6 +19,7 @@ import {
 import {
   ChevronDownIcon
 } from '@chakra-ui/icons'
+import { color } from 'framer-motion';
 
 const Navbar1 = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false)
@@ -44,8 +45,8 @@ const Navbar1 = () => {
             <li>
               {/* <a href="/home">Team</a> */}
               <Menu>
-                <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                  Actions
+                <MenuButton as={Button} rightIcon={<ChevronDownIcon />} >
+                  Team
                 </MenuButton>
                 <MenuList>
                   <MenuItem>Faculty</MenuItem>
