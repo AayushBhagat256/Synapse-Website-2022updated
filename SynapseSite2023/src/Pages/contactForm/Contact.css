@@ -7,8 +7,11 @@
 }
 .infobox{
     width: 500px;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* overflow-wrap: break-word; */
+}
+#box123{
+    margin-top: -12px;
 }
 
 @media (max-width:800px){

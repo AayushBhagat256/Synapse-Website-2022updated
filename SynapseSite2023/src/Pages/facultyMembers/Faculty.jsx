@@ -11,7 +11,18 @@ import Nav from '../../Components/Navigation/Nav'
 
 function Faculty() {
   const [coreData, setCoreData] = useState([])
-  const [loading,setLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [showFullTestimonialArray, setShowFullTestimonialArray] = useState(
+    Array(coreData.length).fill(false)
+  );
+
+  const handleReadMoreClick = (index) => {
+    // setShowFullTestimonial(!showFullTestimonial);
+    const updatedShowFullTestimonialArray = [...showFullTestimonialArray];
+    updatedShowFullTestimonialArray[index] = !updatedShowFullTestimonialArray[index];
+    setShowFullTestimonialArray(updatedShowFullTestimonialArray);
+  };
+
   useEffect(
     () => {
       CoreDataApi()
@@ -41,28 +52,40 @@ function Faculty() {
   return (
     <div>
       {/* <Navbar/> */}
-      <Nav/>
+      <Nav />
       <ChakraProvider>
-      {
-        loading?(<><Heading textAlign={'center'} fontSize={'43px'}>Faculty</Heading>
-        <br />
-        <Center>
-          {/* <br /> */}
-          <SimpleGrid gap={'12'} columns={{ base: 1, md: 2 }}>
-            {
-              coreData.map(map => {
-                return (
-                  <ContentCard image={map.Profilepic} name={map.Fname + " " + map.Lname} post={map.Position}
-                    github={map.fk_contactid.github} gmail={map.fk_contactid.email} LinkedIn={map.fk_contactid.linkedin} Instagram={map.fk_contactid.insta}
-                    testimonial={map.testimonial} />
-                )
-              })
-            }
-          </SimpleGrid>
-        </Center>
-        </>
-        ):(<Loader/>)
-      }
+        {
+          loading ? (<><Heading textAlign={'center'} fontSize={'43px'}>Faculty</Heading>
+            <br />
+            <Center>
+              {/* <br /> */}
+              <SimpleGrid gap={'12'} columns={{ base: 1, md: 2 }}>
+                {
+                  coreData.map((map, i) => {
+                    const limitedTestimonial = map.testimonial.substr(0, 120);
+                    const shouldShowReadMore = map.testimonial.length > 120 && !showFullTestimonialArray[i];
+                    return (
+                      <ContentCard image={map.Profilepic} name={map.Fname + " " + map.Lname} post={map.Position}
+                        github={map.fk_contactid.github} gmail={map.fk_contactid.email} LinkedIn={map.fk_contactid.linkedin} Instagram={map.fk_contactid.insta}
+                        // testimonial={(shouldShowReadMore ? limitedTestimonial : map.testimonial)}
+                        testimonial={
+                          shouldShowReadMore ? (
+                            <span>
+                              {limitedTestimonial} <button onClick={() => handleReadMoreClick(i)}>...Read More</button>
+                            </span>
+                          ) : (
+                            map.testimonial
+                          )
+                        }
+                      />
+                    )
+                  })
+                }
+              </SimpleGrid>
+            </Center>
+          </>
+          ) : (<Loader />)
+        }
 
       </ChakraProvider>
     </div>

@@ -182,8 +182,8 @@ export default function Contact() {
                     <Text ml={'40px'} mt={{ sm: 2, md: 2, lg: 2 }} color="gray.500">
                       Get in touch with us..
                     </Text>
-                    <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
-                      <VStack pl={0} ml={{ base: 0, md: 5 }} align={'flex-start'} spacing={3} >
+                    <Box marginTop={0} id='box123' py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
+                      <VStack pl={0} ml={{ base: 0, md: 5 }} align={'flex-start'} spacing={2} >
                         <Button
                           size="md"
                           height="48px"
