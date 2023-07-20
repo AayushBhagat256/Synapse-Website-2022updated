@@ -17,7 +17,10 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path='/' element={<Nav/>}/>
+          <Route path='/' element={<>
+            <Nav/>
+            <UpcomingEventcard/>
+          </>}/>
         </Routes>
         <Routes>
           <Route path='/nav' element={<Nav/>}/>
@@ -38,7 +41,7 @@ function App() {
           <Route path='/load' element={<Loader/>}/>
         </Routes>
       </Router>
-      <UpcomingEventcard/>
+      {/* <UpcomingEventcard/> */}
     </>
   )
 }
