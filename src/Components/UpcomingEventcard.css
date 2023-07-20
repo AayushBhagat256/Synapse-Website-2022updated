@@ -43,7 +43,7 @@
   
   html {
     /* 10px as 1rem. */
-    font-size: 80%;
+    /* font-size: 80%; */
   
     @media (max-width: 75em) {
       
