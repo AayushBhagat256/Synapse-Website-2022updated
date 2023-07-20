@@ -8,6 +8,7 @@ import Faculty from './Pages/facultyMembers/Faculty'
 import Contact from './Pages/contactForm/Contact'
 import Loader from './Components/Loader/Loader'
 import Nav from './Components/Navigation/Nav'
+import UpcomingEventcard from './Components/UpcomingEventcard'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +38,7 @@ function App() {
           <Route path='/load' element={<Loader/>}/>
         </Routes>
       </Router>
+      <UpcomingEventcard/>
     </>
   )
 }

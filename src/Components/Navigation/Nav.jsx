@@ -19,9 +19,7 @@ function Nav() {
                                 <li class="nav-item">
                                     <Link class="nav-link active mx-2" aria-current="page" to="/"><b className='nav'>Home</b></Link>
                                 </li>
-                                <li class="nav-item">
-                                    <Link class="nav-link active mx-2" to="/project"><b className='nav' >Projects</b></Link>
-                                </li>
+                                
                                 <li class="nav-item dropdown">
                                     <Link class="nav-link active dropdown-toggle" to="#" id='drop' role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <b> Team</b>
@@ -31,6 +29,9 @@ function Nav() {
                                         <li><Link class="dropdown-item" to="/excore">Founders</Link></li>
                                         <li><Link class="dropdown-item" to="/core">Core</Link></li>
                                     </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <Link class="nav-link active mx-2" to="/project"><b className='nav' >Projects</b></Link>
                                 </li>
                                 <li class="nav-item">
                                     <Link class="nav-link active mx-2" aria-current="page" to="/timeline"><b className='nav'>Events</b></Link>
