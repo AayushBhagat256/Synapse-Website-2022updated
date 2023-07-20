@@ -27,8 +27,8 @@ const UpcomingEventcard = () => {
     newevents.map(ecard =>
         <div>
           <h1 className='upheading'>Upcoming Events</h1>
-          <div class="artboard" key={ecard.id}>
-            <div class="upcard">
+          <div class="artboard" >
+            <div class="upcard" key={ecard.id}>
   
               <div class="card__side card__side--back">
                 <div class="card__details">
