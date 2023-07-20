@@ -37,57 +37,120 @@ import Nav from '../../Components/Navigation/Nav';
 
 export default function Contact() {
   const toast = useToast()
-  const [name, setName] = useState()
+  const [name, setName] = useState('')
   const [email, setEmail] = useState()
-  const [number, setNumber] = useState()
-  const [msg, setMsg] = useState()
+  const [number, setNumber] = useState('')
+  const [msg, setMsg] = useState('')
+  const [error, setError] = useState(false)
+  const validate = () => {
+    let hasError = false;
+
+    if (name.length < 3) {
+      hasError = true
+      toast({
+        position: 'top',
+        title: 'Form Incomplete',
+        description: 'Please fill you correct Name',
+        status: 'error',
+        duration: 2500,
+        isClosable: true,
+      })
+    }
+    if (number.length != 10) {
+      hasError = true
+      toast({
+        position: 'top',
+        title: 'Form Incomplete',
+        description: 'Please fill your 10 Digit Contact Number',
+        status: 'error',
+        duration: 2500,
+        isClosable: true,
+      })
+    }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if ((!emailPattern.test(email)) || email.length < 3) {
+      hasError = true;
+      toast({
+        position: 'top',
+        title: 'Form Incomplete',
+        description: 'Enter your Email ID',
+        status: 'error',
+        duration: 2500,
+        isClosable: true,
+      })
+    }
+    if (msg.length < 3) {
+      hasError = true
+      toast({
+        position: 'top',
+        title: 'Form Incomplete',
+        description: 'Please fill your Message',
+        status: 'error',
+        duration: 2500,
+        isClosable: true,
+      })
+    }
+
+    console.log("Form validator error is : " + hasError)
+    setError(hasError)
+    return hasError
+  }
   const sendMessage = () => {
     // const axios = require('axios');
-    let data = JSON.stringify({
-      "name": name,
-      "email": email,
-      "number": number,
-      "message": msg
-    });
-
-    let config = {
-      method: 'post',
-      maxBodyLength: Infinity,
-      url: 'https://synapseop.pythonanywhere.com/sendMessage/',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: data
-    };
-
-    axios.request(config)
-      .then((response) => {
-        console.log(JSON.stringify(response.data));
-
-        toast({
-          position: 'top',
-          title: 'Your message has reached',
-          description: response.data.message,
-          status: 'success',
-          duration: 2500,
-          isClosable: true,
-        })
-
-        setEmail('')
-        setMsg('')
-        setName('')
-        setNumber('')
-
-      })
-      .catch((error) => {
-        console.log(error);
+    const err = validate();
+    console.log("API validator is " + err)
+    if (err) {
+      // alert("Plz fill the detials")
+      console.log("Fill in proper detials")
+    }
+    else {
+      let data = JSON.stringify({
+        "name": name,
+        "email": email,
+        "number": number,
+        "message": msg
       });
+
+      let config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'https://synapseop.pythonanywhere.com/sendMessage/',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: data
+      };
+
+      axios.request(config)
+        .then((response) => {
+          console.log(JSON.stringify(response.data));
+
+          toast({
+            position: 'top',
+            title: 'Your message has reached',
+            description: response.data.message,
+            status: 'success',
+            duration: 2500,
+            isClosable: true,
+          })
+
+          setEmail('')
+          setMsg('')
+          setName('')
+          setNumber('')
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+
+    }
 
   }
   return (
     <ChakraProvider>
       {/* <Navbar /> */}
-      <Nav/>
+      <Nav />
       <Container maxW="full" mt={0} centerContent overflow="hidden">
         <Flex>
           <svg className='arrow' xmlns="http://www.w3.org/2000/svg" width="122" height="95" viewBox="0 0 122 95" fill="none">
@@ -165,10 +228,11 @@ export default function Contact() {
                           <Button
                             onClick={sendMessage}
                             variant="solid"
-                            bg="#0D74FF"
-                            color="white"
+                            bg="#81C6E8"
+                            border={'1px solid rgba(0, 0, 0, 0.50)'}
+                            // color="white"
                             _hover={{}}>
-                            Send Message
+                            Sent !
                           </Button>
                         </FormControl>
                       </VStack>
@@ -211,7 +275,8 @@ export default function Contact() {
                           variant="ghost"
                           color="black"
                           _hover={{ border: '2px solid #1C6FEB' }}
-                          leftIcon={<MdLocationOn size="20px" />}>
+                          leftIcon={<MdLocationOn size="20px" />}
+                        >
                           Mumbai , India
                         </Button>
                         <Button

@@ -28,6 +28,7 @@
         /* overflow-inline: 300px; */
     }
     .arrow{
-        transform: rotate(-7.639deg);
+        /* transform: rotate(-7.639deg); */
+        transform: rotate(-17.639deg);
     }
 }
