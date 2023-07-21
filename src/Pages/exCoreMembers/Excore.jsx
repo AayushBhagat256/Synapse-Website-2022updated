@@ -70,7 +70,7 @@ function Excore() {
                         testimonial={
                           shouldShowReadMore ? (
                             <span>
-                              {limitedTestimonial} <button onClick={() => handleReadMoreClick(i)}>...Read More</button>
+                              {limitedTestimonial} <button style={{color:'#166BBD'}} onClick={() => handleReadMoreClick(i)}>...Read More</button>
                             </span>
                           ) : (
                             map.testimonial
