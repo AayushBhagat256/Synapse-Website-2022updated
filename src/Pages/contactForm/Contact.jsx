@@ -34,6 +34,7 @@ import Navbar from '../../Components/Navbar';
 import axios from 'axios'
 import { useState } from 'react';
 import Nav from '../../Components/Navigation/Nav';
+import Footer from '../../Components/Footer';
 
 export default function Contact() {
   const toast = useToast()
@@ -299,6 +300,8 @@ export default function Contact() {
           </Box>
         </Flex>
       </Container>
+      <Footer/>
     </ChakraProvider>
+    
   );
 }

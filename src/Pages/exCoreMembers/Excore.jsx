@@ -8,6 +8,7 @@ import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
+import Footer from '../../Components/Footer'
 
 function Excore() {
   const [coreData, setCoreData] = useState([])
@@ -85,7 +86,7 @@ function Excore() {
           </>
           ) : (<Loader />)
         }
-
+      <Footer/>
       </ChakraProvider>
     </div>
   )

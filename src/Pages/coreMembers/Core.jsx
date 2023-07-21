@@ -8,6 +8,7 @@ import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
+import Footer from '../../Components/Footer'
 
 function Core() {
   const [coreData, setCoreData] = useState([])
@@ -87,7 +88,7 @@ function Core() {
         </>
         ) : (<Loader />)
       }
-
+      <Footer/>
     </ChakraProvider>
   )
 }

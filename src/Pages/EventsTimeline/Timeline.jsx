@@ -2,6 +2,8 @@ import React from 'react'
 import './Timeline.css'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Nav from '../../Components/Navigation/Nav';
+import Footer from '../../Components/Footer';
 
 function Timeline() {
     const [events, setEvents] = useState([]);
@@ -25,6 +27,7 @@ function Timeline() {
     )
     return (
         <div>
+            <Nav/>
             <h1 className='etimetitle' style={{fontSize:30, color:'#1a1a1a'}}><b>Events</b></h1>
             {
                 events.map(event =>
@@ -54,6 +57,7 @@ function Timeline() {
                         )}
                     </div>)
             }
+            <Footer/>
         </div>
     )
 }

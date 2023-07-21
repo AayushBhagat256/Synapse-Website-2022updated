@@ -10,6 +10,7 @@ import Loader from './Components/Loader/Loader'
 import Nav from './Components/Navigation/Nav'
 import UpcomingEventcard from './Components/UpcomingEventcard'
 import Footer from './Components/Footer'
+import Timeline from './Pages/EventsTimeline/Timeline'
 // import Footer from './Components/Footer'
 
 function App() {
@@ -45,9 +46,12 @@ function App() {
         <Routes>
           <Route path='/footer' element={<Footer/>}/>
         </Routes>
+        <Routes>
+          <Route path='/timeline' element={<Timeline/>}/>
+        </Routes>
       </Router>
       {/* <UpcomingEventcard/> */}
-      <Footer/>
+      {/* <Footer/> */}
       
     </>
   )
