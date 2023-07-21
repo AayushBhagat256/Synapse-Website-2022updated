@@ -18,8 +18,11 @@
 .btn12send {
     font-family: inherit;
     font-size: 18px;
-    background: linear-gradient(to bottom, #4dc7d9 0%,#99b7e2 100%);
+    /* background: linear-gradient(to bottom, #4dc7d9 0%,#99b7e2 100%); */
+    /* background: linear-gradient(180deg, #81C6E8 0%, rgba(129, 198, 232, 0) 100%, rgba(129, 198, 232, 0.79) 100%); */
+    background: linear-gradient(180deg, #81C6E8 0%, rgba(129, 198, 232, 0) 100%, rgba(129, 198, 232, 0.79) 100%);
     /* color: white; */
+    color: #1a1a1a;
     padding: 0.8em 1.2em;
     display: flex;
     height: 45px;
