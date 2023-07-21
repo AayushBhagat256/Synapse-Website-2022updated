@@ -9,6 +9,7 @@ import Contact from './Pages/contactForm/Contact'
 import Loader from './Components/Loader/Loader'
 import Nav from './Components/Navigation/Nav'
 import UpcomingEventcard from './Components/UpcomingEventcard'
+import Footer from './Components/Footer'
 // import Footer from './Components/Footer'
 
 function App() {
@@ -41,8 +42,12 @@ function App() {
         <Routes>
           <Route path='/load' element={<Loader/>}/>
         </Routes>
+        <Routes>
+          <Route path='/footer' element={<Footer/>}/>
+        </Routes>
       </Router>
       {/* <UpcomingEventcard/> */}
+      <Footer/>
       
     </>
   )

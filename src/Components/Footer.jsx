@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box,
   chakra,
+  ChakraProvider,
   Container,
   Link,
   Stack,
@@ -14,6 +15,14 @@ import { BsInstagram} from 'react-icons/bs';
 import { LuLinkedin} from 'react-icons/lu';
 import { ReactNode } from 'react';
 import { color } from 'framer-motion';
+
+// Define your custom theme
+const customTheme = {
+  colors: {
+    // Add the required color here
+    '#81C6E8': '#81C6E8',
+  },
+};
 
 const Logo = (props) => {
   return (
@@ -51,8 +60,10 @@ const SocialButton = ({ children, label, href }) => {
 
 const Footer = () => {
   return (
-    <Box
-    bgGradient='linear(to-t, #81C6E8 0%, #81C6E8 5%,rgba(129, 198, 232, 0.54) 45% )'
+   <ChakraProvider>
+     <Box
+    bgGradient={'linear(to-t, #81C6E8 0%, #81C6E8 5%,rgba(129, 198, 232, 0.54) 45% )'}
+    // bgGradient={'linear-gradient(360deg, #81C6E8 0%, rgba(129, 198, 232, 0.54) 44.58%, rgba(129, 198, 232, 0.00) 100%)'}
       color={useColorModeValue('#1a1a1a')}
      >
       <Container
@@ -100,6 +111,7 @@ const Footer = () => {
         </Container>
       </Box>
     </Box>
+   </ChakraProvider>
   );
 };
 
