@@ -9,6 +9,7 @@ import Contact from './Pages/contactForm/Contact'
 import Loader from './Components/Loader/Loader'
 import Nav from './Components/Navigation/Nav'
 import UpcomingEventcard from './Components/UpcomingEventcard'
+// import Footer from './Components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,6 +43,7 @@ function App() {
         </Routes>
       </Router>
       {/* <UpcomingEventcard/> */}
+      
     </>
   )
 }
