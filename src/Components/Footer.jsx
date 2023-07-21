@@ -62,7 +62,7 @@ const Footer = () => {
   return (
    <ChakraProvider>
      <Box
-    bgGradient={'linear(to-t, #81C6E8 0%, #81C6E8 5%,rgba(129, 198, 232, 0.54) 45% )'}
+    bgGradient={'linear(to-t, #81C6E8 0%, #81C6E8 20%,rgba(129, 198, 232, 0.54) 55% )'}
     // bgGradient={'linear-gradient(360deg, #81C6E8 0%, rgba(129, 198, 232, 0.54) 44.58%, rgba(129, 198, 232, 0.00) 100%)'}
       color={useColorModeValue('#1a1a1a')}
      >
@@ -74,7 +74,7 @@ const Footer = () => {
         justify={'center'}
         align={'center'}>
         <Logo />
-        <Stack direction={'row'} spacing={6} fontWeight={'semibold'}  _hover={useColorModeValue('#1a1a1a')}>
+        <Stack direction={'row'} spacing={6} fontWeight={'semibold'}  _hover={useColorModeValue('#1a1a1a')} >
           <Link href={'#'} >About us</Link>
           <Link href={'#'}>Projects</Link>
           <Link href={'#'}>Events</Link>
