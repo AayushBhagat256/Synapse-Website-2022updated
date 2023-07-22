@@ -11,6 +11,7 @@ import Nav from './Components/Navigation/Nav'
 import UpcomingEventcard from './Components/UpcomingEventcard'
 import Footer from './Components/Footer'
 import Timeline from './Pages/EventsTimeline/Timeline'
+import Projects from './Pages/Projects/ResearchPaper'
 // import Footer from './Components/Footer'
 
 function App() {
@@ -36,6 +37,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/fac' element={<Faculty/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/project' element={<Projects/>}/>
         </Routes>
         <Routes>
           <Route path='/contact' element={<Contact/>}/>
