@@ -53,6 +53,7 @@ export default function ContentCard(props) {
     return (
         <Center py={0}>
             <Box
+                data-aos="fade-up"
                 maxW={'400px'}
                 w={'full'}
                 bg={useColorModeValue('white', 'gray.900')}

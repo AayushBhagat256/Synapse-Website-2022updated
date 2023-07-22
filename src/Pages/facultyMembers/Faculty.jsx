@@ -9,6 +9,8 @@ import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
 import Footer from '../../Components/Footer'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 function Faculty() {
   const [coreData, setCoreData] = useState([])
@@ -23,6 +25,12 @@ function Faculty() {
     updatedShowFullTestimonialArray[index] = !updatedShowFullTestimonialArray[index];
     setShowFullTestimonialArray(updatedShowFullTestimonialArray);
   };
+
+  useEffect(
+    () => {
+      Aos.init({ duration: 2000 });
+    }, []
+  )
 
   useEffect(
     () => {
@@ -72,7 +80,7 @@ function Faculty() {
                         testimonial={
                           shouldShowReadMore ? (
                             <span>
-                              {limitedTestimonial} <button style={{color:'#166BBD'}} onClick={() => handleReadMoreClick(i)}>...Read More</button>
+                              {limitedTestimonial} <button style={{ color: '#166BBD' }} onClick={() => handleReadMoreClick(i)}>...Read More</button>
                             </span>
                           ) : (
                             map.testimonial
@@ -84,10 +92,10 @@ function Faculty() {
                 }
               </SimpleGrid>
             </Center>
+            <Footer />
           </>
           ) : (<Loader />)
         }
-      <Footer/>
       </ChakraProvider>
     </div>
   )

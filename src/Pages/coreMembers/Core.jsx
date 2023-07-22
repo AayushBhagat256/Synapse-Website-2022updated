@@ -9,6 +9,8 @@ import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
 import Footer from '../../Components/Footer'
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 function Core() {
   const [coreData, setCoreData] = useState([])
@@ -24,6 +26,11 @@ function Core() {
     updatedShowFullTestimonialArray[index] = !updatedShowFullTestimonialArray[index];
     setShowFullTestimonialArray(updatedShowFullTestimonialArray);
   };
+  useEffect(
+    () => {
+        Aos.init({ duration: 2000 });
+    }, []
+)
   useEffect(
     () => {
       CoreDataApi()
@@ -85,10 +92,10 @@ function Core() {
               }
             </SimpleGrid>
           </Center>
+          <Footer/>
         </>
         ) : (<Loader />)
       }
-      <Footer/>
     </ChakraProvider>
   )
 }
