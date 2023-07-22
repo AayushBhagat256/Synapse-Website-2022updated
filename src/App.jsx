@@ -48,12 +48,12 @@ function App() {
           <Route path='/load' element={<Loader/>}/>
         </Routes>
         <Routes>
-          <Route path='/footer' element={<Footer/>}/>
-        </Routes>
-        <Routes>
           <Route path='/timeline' element={<Timeline/>}/>
         </Routes>
-      </Router>
+      <Routes>
+          <Route path='/footer' element={<Footer/>}/>
+        </Routes>
+        </Router>
       {/* <UpcomingEventcard/> */}
       {/* <Footer/> */}
       

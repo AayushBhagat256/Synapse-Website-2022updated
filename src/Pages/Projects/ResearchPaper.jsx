@@ -8,6 +8,7 @@ import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
+import Footer from '../../Components/Footer'
 
 function Projects() {
   const [projectData, setprojectData] = useState([])
@@ -62,6 +63,7 @@ function Projects() {
               }
             </SimpleGrid>
           </Center>
+          <Footer/>
         </>
         ) : (<Loader />)
       }
