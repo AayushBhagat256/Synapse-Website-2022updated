@@ -22,3 +22,15 @@
 .navbar-toggler.black-toggler .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cline stroke='black' stroke-width='2' x1='3' y1='12' x2='27' y2='12'/%3E%3Cline stroke='black' stroke-width='2' x1='3' y1='6' x2='27' y2='6'/%3E%3Cline stroke='black' stroke-width='2' x1='3' y1='18' x2='27' y2='18'/%3E%3C/svg%3E");
 }
+
+/* @media (max-width:800px){
+    .respbox{
+        margin-left: 5px;
+    }
+}
+
+@media (max-width:425px){
+    .respbox{
+        margin-left: 5px;
+    }
+} */
