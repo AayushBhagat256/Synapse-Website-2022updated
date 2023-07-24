@@ -92,6 +92,7 @@ function Faculty() {
                 }
               </SimpleGrid>
             </Center>
+            <br />
             <Footer />
           </>
           ) : (<Loader />)

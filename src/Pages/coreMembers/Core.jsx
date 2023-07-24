@@ -92,6 +92,7 @@ function Core() {
               }
             </SimpleGrid>
           </Center>
+          <br />
           <Footer/>
         </>
         ) : (<Loader />)

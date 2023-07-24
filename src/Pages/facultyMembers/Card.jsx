@@ -59,6 +59,8 @@ export default function ContentCard(props) {
                 bg={useColorModeValue('white', 'gray.900')}
                 boxShadow={'5px 10px 20px 0px rgba(129, 198, 232, 0.30)'}
                 rounded={'md'}
+                marginLeft={{base:3}}
+                marginRight={{base:3}}
                 p={6}
                 overflow={'hidden'}>
                 <Box

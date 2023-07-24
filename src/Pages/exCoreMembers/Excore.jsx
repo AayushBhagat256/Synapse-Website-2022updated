@@ -90,6 +90,7 @@ function Excore() {
                 }
               </SimpleGrid>
             </Center>
+            <br />
             <Footer/>
           </>
           ) : (<Loader />)

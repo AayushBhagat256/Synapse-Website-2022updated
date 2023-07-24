@@ -322,6 +322,7 @@ export default function Contact() {
           </Box>
         </Flex>
       </Container>
+      <br />
       <Footer />
     </ChakraProvider>
 
