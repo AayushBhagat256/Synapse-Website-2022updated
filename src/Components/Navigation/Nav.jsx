@@ -22,7 +22,7 @@ function Nav() {
                                 
                                 <li class="nav-item dropdown">
                                     <Link class="nav-link active dropdown-toggle" to="#" id='drop' role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <b> Team</b>
+                                        <b style={{marginLeft:"4px"}}>  Team</b>
                                     </Link>
                                     <ul class="dropdown-menu dropdown-menu-light bg-light">
                                         <li><Link class="dropdown-item" to="/fac">Faculty</Link></li>
