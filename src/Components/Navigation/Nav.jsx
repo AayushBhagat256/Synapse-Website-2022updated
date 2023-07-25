@@ -26,7 +26,7 @@ function Nav() {
                                     </Link>
                                     <ul class="dropdown-menu dropdown-menu-light bg-light">
                                         <li><Link class="dropdown-item" to="/fac">Faculty</Link></li>
-                                        <li><Link class="dropdown-item" to="/excore">Founders</Link></li>
+                                        {/* <li><Link class="dropdown-item" to="/excore">Founders</Link></li> */}
                                         <li><Link class="dropdown-item" to="/core">Core</Link></li>
                                     </ul>
                                 </li>

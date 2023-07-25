@@ -8,6 +8,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Select,
   Button,
   MenuItemOption,
   MenuGroup,
@@ -28,10 +29,11 @@ import 'aos/dist/aos.css'
 function Core() {
   const [coreData, setCoreData] = useState([])
   const [loading, setLoading] = useState(false)
-  const [year,setYear] = useState('2022-23')
+  const [year, setYear] = useState('2022')
   // const [showFullTestimonial, setShowFullTestimonial] = useState(false);
   const [showFullTestimonialArray, setShowFullTestimonialArray] = useState(
-    Array(coreData.length).fill(false)
+    // Array(coreData.length).fill(false)
+    coreData ? Array(coreData.length).fill(false) : []
   );
 
   const handleReadMoreClick = (index) => {
@@ -45,17 +47,23 @@ function Core() {
       Aos.init({ duration: 2000 });
     }, []
   )
+  const intyear = parseInt(year)
   useEffect(
     () => {
-      CoreDataApi()
+      CoreDataApi(intyear)
     }, []
   )
-  const CoreDataApi = () => {
+
+
+  const CoreDataApi = (intyear) => {
+
+
 
     let config = {
       method: 'get',
       maxBodyLength: Infinity,
-      url: 'https://synapseop.pythonanywhere.com/core/',
+      // url: 'https://synapseop.pythonanywhere.com/core/',
+      url: `https://synapseop.pythonanywhere.com/core/?year=${intyear}`,
       headers: {}
     };
 
@@ -70,13 +78,12 @@ function Core() {
       });
 
   }
-  console.log(coreData)
-  const handleClick = (event) => {
-    const selectedValue = event.target.value;
-    console.log(selectedValue);
-    setYear(selectedValue)
-    setLoading(false)
-    CoreDataApi()
+  const handleClick = async (event) => {
+    const selectedValue = event.target.textContent;
+    setYear(selectedValue);
+    console.log(year);
+    const intyear = parseInt(selectedValue); // Use selectedValue instead of year
+    CoreDataApi(intyear);
   };
   return (
     <ChakraProvider>
@@ -84,25 +91,22 @@ function Core() {
       <Nav />
       {
         loading ? (<>
-        <HStack  >
-        <Center margin={'auto'}>
-        <Heading textAlign={'center'} fontSize={'43px'}>Core</Heading>
-          <Menu>
-            <MenuButton backgroundColor={'rgba(129, 198, 232, 0.50)'} as={Button} marginLeft={3} rightIcon={<ChevronDownIcon />}
-            _hover={{backgroundColor:'rgba(129, 198, 232, 0.50)'}}
-            >
-              {year}
-            </MenuButton>
-            <MenuList>
-              <MenuItem value={'2022-23'} onClick={handleClick}>2022-23</MenuItem>
-              <MenuItem value={'2023-24'} onClick={handleClick}>2023-24</MenuItem>
-              {/* <MenuItem onClick={handleClick}>Mark as Draft</MenuItem>
-              <MenuItem onClick={handleClick}>Delete</MenuItem>
-              <MenuItem onClick={handleClick}>Attend a Workshop</MenuItem> */}
-            </MenuList>
-          </Menu>
-        </Center>
-        </HStack>
+          <HStack  >
+            <Center margin={'auto'}>
+              <Heading textAlign={'center'} fontSize={'43px'}>Core</Heading>
+              <Menu>
+                <MenuButton backgroundColor={'rgba(129, 198, 232, 0.50)'} as={Button} marginLeft={3} rightIcon={<ChevronDownIcon />}
+                  _hover={{ backgroundColor: 'rgba(129, 198, 232, 0.50)' }}
+                >
+                  {year}
+                </MenuButton>
+                <MenuList>
+                  <MenuItem onClick={handleClick}>2022</MenuItem>
+                  <MenuItem onClick={handleClick}>2023</MenuItem>
+                </MenuList>
+              </Menu>
+            </Center>
+          </HStack>
           <br />
           <Center>
             {/* <br /> */}
@@ -135,8 +139,8 @@ function Core() {
           <br />
           <Footer />
         </>
-        // ) : (<Loader />)
-        ) : (<LoadAni/>)
+          // ) : (<Loader />)
+        ) : (<LoadAni />)
       }
     </ChakraProvider>
   )
