@@ -26,6 +26,7 @@ const LoadingAnimation = () => {
         <div className="loader">
             <div className="loader-content">
             <div ref={containerRef} />
+            <div className="text">Loading ...</div>
             </div>
         </div>
     );

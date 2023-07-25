@@ -9,6 +9,10 @@
     /* background-color: red; */
 }
 
+.text{
+    text-align: center;
+}
+
 .loader-content {
     position: absolute;
     top: 50%;

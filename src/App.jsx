@@ -12,6 +12,7 @@ import UpcomingEventcard from './Components/UpcomingEventcard'
 import Footer from './Components/Footer'
 import Timeline from './Pages/EventsTimeline/Timeline'
 import Projects from './Pages/Projects/ResearchPaper'
+import LoadingAnimation from './Components/Loader/LoaderJson'
 // import Footer from './Components/Footer'
 
 function App() {
@@ -45,7 +46,8 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
         </Routes>
         <Routes>
-          <Route path='/load' element={<Loader/>}/>
+          {/* <Route path='/load' element={<Loader/>}/> */}
+          <Route path='/load' element={<LoadingAnimation/>}/>
         </Routes>
         <Routes>
           <Route path='/timeline' element={<Timeline/>}/>
