@@ -10,6 +10,7 @@ import {
   HStack,
   Wrap,
   WrapItem,
+  CircularProgress,
   FormControl,
   FormLabel,
   Input,
@@ -43,6 +44,7 @@ export default function Contact() {
   const [number, setNumber] = useState('')
   const [msg, setMsg] = useState('')
   const [error, setError] = useState(false)
+  const [load, setLoad] = useState(false)
   const validate = () => {
     let hasError = false;
 
@@ -105,6 +107,7 @@ export default function Contact() {
       console.log("Fill in proper detials")
     }
     else {
+      setLoad(true)
       let data = JSON.stringify({
         "name": name,
         "email": email,
@@ -125,7 +128,7 @@ export default function Contact() {
       axios.request(config)
         .then((response) => {
           console.log(JSON.stringify(response.data));
-
+          setLoad(false)
           toast({
             position: 'top',
             title: 'Your message has reached',
@@ -247,15 +250,21 @@ export default function Contact() {
                             <span>Send</span>
                           </button> */}
                           <button onClick={sendMessage} className='btn12send'>
-                            <div class="svg-wrapper-1">
-                              <div class="svg-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                  <path fill="none" d="M0 0h24v24H0z"></path>
-                                  <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
-                                </svg>
-                              </div>
-                            </div>
-                            <span>Send</span>
+                            {
+                              !load ? (
+                                <>
+                                  <span>Send</span>
+                                  <div class="svg-wrapper-1">
+                                    <div class="svg-wrapper">
+                                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </>
+                              ) : (<CircularProgress isIndeterminate color='black' />)
+                            }
                           </button>
                         </FormControl>
                       </VStack>

@@ -4,13 +4,16 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import Nav from '../../Components/Navigation/Nav';
 import Footer from '../../Components/Footer';
+import LoadingAnimation from '../../Components/Loader/LoaderJson';
 
 function Timeline() {
     const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(false)
     const fetchApi = () => {
         fetch("https://synapseop.pythonanywhere.com/past_events/")
             .then((data) => {
                 console.log(data)
+                setLoading(true)
                 return data.json();
             })
             .then((objectData) => {
@@ -27,37 +30,43 @@ function Timeline() {
     )
     return (
         <div>
-            <Nav/>
-            <h1 className='etimetitle' style={{fontSize:30, color:'#1a1a1a'}}><b>Events</b></h1>
             {
-                events.map(event =>
-                    <div class="timeline">
-                        {event.id % 2 === 0 ? (
-                            <>
-                                <div class="econtainer left">
-                                    <div class="econtent">
-                                        <h1 className='timetitle'>{event.title}</h1>
-                                        <h4 className='timedate'>{event.date}</h4>
-                                        <p className='timedesc'>{event.description}</p>
-                                        <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                loading?(
+                    <>
+                    <Nav/>
+                <h1 className='etimetitle' style={{fontSize:30, color:'#1a1a1a'}}><b>Events</b></h1>
+                {
+                    events.map(event =>
+                        <div class="timeline">
+                            {event.id % 2 === 0 ? (
+                                <>
+                                    <div class="econtainer left">
+                                        <div class="econtent">
+                                            <h1 className='timetitle'>{event.title}</h1>
+                                            <h4 className='timedate'>{event.date}</h4>
+                                            <p className='timedesc'>{event.description}</p>
+                                            <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                                        </div>
                                     </div>
-                                </div>
-                            </>
-                        ) : (
-                            <>
-                                <div class="econtainer right">
-                                    <div class="econtent">
-                                        <h1 className='timetitle'>{event.title}</h1>
-                                        <h4 className='timedate'>{event.date}</h4>
-                                        <p className='timedesc'>{event.description}</p>
-                                        <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                                </>
+                            ) : (
+                                <>
+                                    <div class="econtainer right">
+                                        <div class="econtent">
+                                            <h1 className='timetitle'>{event.title}</h1>
+                                            <h4 className='timedate'>{event.date}</h4>
+                                            <p className='timedesc'>{event.description}</p>
+                                            <img src={imgurl2 + event.images[0]} alt='' className='etimeimg img-fluid' ></img>
+                                        </div>
                                     </div>
-                                </div>
-                            </>
-                        )}
-                    </div>)
+                                </>
+                            )}
+                        </div>)
+                }
+                <Footer/>
+                    </>
+                ):(<LoadingAnimation/>)
             }
-            <Footer/>
         </div>
     )
 }

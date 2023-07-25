@@ -11,6 +11,7 @@ import Nav from '../../Components/Navigation/Nav'
 import Footer from '../../Components/Footer'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
+import LoadingAnimation from '../../Components/Loader/LoaderJson'
 
 function Faculty() {
   const [coreData, setCoreData] = useState([])
@@ -95,7 +96,8 @@ function Faculty() {
             <br />
             <Footer />
           </>
-          ) : (<Loader />)
+          // ) : (<Loader />)
+          ) : (<LoadingAnimation/>)
         }
       </ChakraProvider>
     </div>

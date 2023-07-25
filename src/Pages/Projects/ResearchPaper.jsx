@@ -9,6 +9,7 @@ import Loader from '../../Components/Loader/Loader'
 import Navbar from '../../Components/Navbar'
 import Nav from '../../Components/Navigation/Nav'
 import Footer from '../../Components/Footer'
+import LoadingAnimation from '../../Components/Loader/LoaderJson'
 
 function Projects() {
   const [projectData, setprojectData] = useState([])
@@ -65,7 +66,8 @@ function Projects() {
           </Center>
           <Footer/>
         </>
-        ) : (<Loader />)
+        // ) : (<Loader />)
+        ) : (<LoadingAnimation/>)
       }
 
     </ChakraProvider>
